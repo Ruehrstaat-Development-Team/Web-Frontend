@@ -2,14 +2,14 @@ import type { NitroFetchRequest, $Fetch } from "nitropack";
 
 export const authRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
 	async login(credentials: Credentials): Promise<SessionToken> {
-        this.refreshSession();
+        await this.refreshSession();
 		return fetch<SessionToken>("auth/login", {
 			method: "POST",
 			body: credentials,
 		});
 	},
 	async logout(): Promise<void> {
-        this.refreshSession();
+        await this.refreshSession();
 		return fetch<void>("auth/logout", {
 			method: "POST",
 		});
@@ -20,7 +20,7 @@ export const authRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
 		});
 	},
 	async beginDiscordLogin(returnUrl: string): Promise<DiscordResponse> {
-        this.refreshSession();
+        await this.refreshSession();
 		return fetch<DiscordResponse>(
 			"auth/login/discord?redirect_to=" + encodeURIComponent(returnUrl),
 			{

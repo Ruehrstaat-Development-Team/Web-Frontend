@@ -2,7 +2,7 @@ import type { NitroFetchRequest, $Fetch } from "nitropack";
 
 export const userRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
 	async getMe(): Promise<User> {
-		this.refreshSession();
+		await this.refreshSession();
 		return fetch<User>("users/@me?full=true", {
 			method: "GET",
 		});
