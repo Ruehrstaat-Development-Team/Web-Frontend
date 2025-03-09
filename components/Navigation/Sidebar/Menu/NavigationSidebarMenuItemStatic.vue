@@ -24,8 +24,7 @@ defineProps({
 	},
 });
 
-var route = useRoute();
-console.log(route.name)
+const route = useRoute();
 </script>
 
 <style lang="scss" scoped></style>

@@ -3,8 +3,8 @@
 		<Card class="overflow-hidden max-w-[90%] w-[500px] shadow-lg">
 			<div class="relative mb-6">
 				<ThemeImage
-					dark_src="/HeaderBackgroundDark.webp"
-					light_src="/HeaderBackgroundLight.webp"
+					dark_src="/BackgroundDark.webp"
+					light_src="/BackgroundLight.webp"
 					class="h-32 w-fit overflow-hidden"
 				/>
 				<h1
@@ -13,9 +13,13 @@
 					Ruehrstaat Squadron
 				</h1>
 				<ThemeImage
-					dark_src="/LogoCleanDark.webp"
-					light_src="/LogoCleanLight.webp"
+					dark_src="/BackgroundDark.webp"
+					light_src="/BackgroundLight.webp"
 					class="absolute bottom-[-20px] left-4 size-20 border-8 border-card rounded-xl image-rounded bg-card"
+				/>
+				<NuxtImg
+					src="/LogoClean.webp"
+					class="absolute bottom-[-20px] left-4 size-20 border-8 border-transparent rounded-xl image-rounded bg-transparent"
 				/>
 			</div>
 			<CardContent>
@@ -42,5 +46,8 @@
 <style lang="scss">
 .image-rounded .theme-image {
 	border-radius: var(--radius);
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 </style>
