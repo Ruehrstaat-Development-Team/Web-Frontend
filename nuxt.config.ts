@@ -25,6 +25,17 @@ export default defineNuxtConfig({
 	},
 
 	//#region Module Configuration
+	tailwindcss: {
+		config: {
+			content: [
+				"./app.vue",
+				"./components/**/*.{vue,js,ts}",
+				"./layouts/**/*.{vue,js,ts}",
+				"./pages/**/*.{vue,js,ts}",
+				"./plugins/**/*.{js,ts}",
+			],
+		},
+	},
 	shadcn: {
 		prefix: "",
 		componentDir: "./components/ui",

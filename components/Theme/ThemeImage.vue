@@ -1,5 +1,5 @@
 <template>
-  <div class="theme-image theme-image-wrapper">
+  <div class="theme-image theme-image-wrapper overflow-hidden">
     <Transition name="fade">
       <div class="loader theme-image" v-if="!loaded"></div>
     </Transition>
@@ -8,7 +8,7 @@
         <NuxtImg
           :src="src"
           @load="loaded = true"
-          class="theme-image"
+          class="theme-image object-cover w-full h-full"
           v-if="!$colorMode.unknown"
           v-show="loaded"
         />

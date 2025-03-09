@@ -1,1 +1,10 @@
-{}
+{
+	"carrier": {
+		"category": {
+			"flagship": "Flagship",
+			"supportvessel": "Support Vessel",
+			"freighter": "Freighter",
+			"other": "Other"
+		}
+	}
+}

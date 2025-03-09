@@ -12,7 +12,7 @@
 		<div class="absolute top-0 left-auto ml-auto mr-auto right-auto w-fit h-full flex flex-row items-center justify-start">
 			<NuxtImg
 				src="/LogoClean.webp"
-				class="object-contain min-h-12 min-w-12 transition-[height,margin,width,border] duration-200"
+				class="object-contain min-h-12 min-w-12 transition-[height,margin,width,border] duration-200 ease-linear"
 				:class="{ 'size-12': !open, 'size-20': open }"
 			/>
 			<NuxtImg
