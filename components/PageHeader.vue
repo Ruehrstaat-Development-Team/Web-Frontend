@@ -16,7 +16,7 @@
 			alt="Ruehrstaat Squadron Banner Background"
 		/>
 		<h1
-			class="text-4xl font-semibold mt-5 absolute bottom-0 left-0 text-white p-5"
+			class="text-4xl font-semibold font-[Primal] mt-5 absolute bottom-0 left-0 text-white p-5"
 		>
 			{{ pageTitle }}
 		</h1>

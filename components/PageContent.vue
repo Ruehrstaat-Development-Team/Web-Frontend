@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5 mx-auto overflow-auto" :class="maxWidth">
+  <div class="pt-5 mx-auto" :class="maxWidth">
     <slot />
   </div>
 </template>

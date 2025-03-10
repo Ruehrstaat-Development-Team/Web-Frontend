@@ -1,11 +1,9 @@
 <template>
 	<PageHeader page-title="Carrier" >
-    <Badge class="bg-background">⭕Live</Badge>
   </PageHeader> 
 	<PageContent>
-		<div class="grid grid-cols-3 gap-4">
-			<PageCarrierCard v-for="carrier in data" :carrier="carrier"/>
-		</div>
+		<PageCarrierSectionOwner :carriers="data" v-if="data != null" class="mb-4"/>
+		<PageCarrierSectionPublic :carriers="data" v-if="data != null"/>
 	</PageContent>
 </template>
 

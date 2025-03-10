@@ -5,6 +5,13 @@
 			"supportvessel": "Support Vessel",
 			"freighter": "Freighter",
 			"other": "Other"
-		}
+		},
+        "dockingaccess": {
+            "all": "All",
+            "none": "None",
+            "friends": "Friends",
+            "squadron": "Squadron",
+            "squadronfriends": "Squadron & Friends"
+        }
 	}
 }

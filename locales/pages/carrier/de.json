@@ -5,6 +5,13 @@
             "supportvessel": "Unterstützungsschiff",
             "freighter": "Frachter",
             "other": "Andere"
+        },
+        "dockingaccess": {
+            "all": "Alle",
+            "none": "Keine",
+            "friends": "Freunde",
+            "squadron": "Staffel",
+            "squadronfriends": "Staffel & Freunde"
         }
     }
 }
