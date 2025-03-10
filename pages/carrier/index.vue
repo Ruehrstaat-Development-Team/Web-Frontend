@@ -1,5 +1,5 @@
 <template>
-	<PageHeader page-title="Carrier" >
+	<PageHeader :page-title="$t('carriers') as string" >
   </PageHeader> 
 	<PageContent>
 		<PageCarrierSectionOwner :carriers="data" v-if="data != null" class="mb-4"/>

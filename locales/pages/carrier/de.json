@@ -1,4 +1,5 @@
 {
+    "carriers": "Flottenträger", 
     "carrier": {
         "category": {
             "flagship": "Flaggschiff",
