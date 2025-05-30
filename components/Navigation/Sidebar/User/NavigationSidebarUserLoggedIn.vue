@@ -51,6 +51,8 @@ defineProps({
 
 const { open } = useSidebar();
 
+const app = useNuxtApp();
+
 const { $api } = useNuxtApp();
 const authRep = authRepository($api);
 const session = useSessionStore();
@@ -62,6 +64,7 @@ const logout = async () => {
 		session.setSession(null);
 		store.setUser(null);
 		toast.success("Logout success");
+		await app.callHook("auth:logout");
 	} catch (e) {
 		toast.error("Logout failed");
 	}

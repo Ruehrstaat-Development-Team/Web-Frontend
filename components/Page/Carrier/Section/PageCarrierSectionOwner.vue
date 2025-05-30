@@ -1,6 +1,9 @@
 <template>
+	<h3 class="text-2xl font-bold mb-4">
+		{{ $t("titles.section.owned") }}
+	</h3>
 	<div
-		class="flex flex-row flex-nowrap overflow-x-auto gap-4"
+		class="flex flex-row flex-nowrap overflow-x-auto gap-4 mb-4"
 		@wheel.prevent="scrollHorizontally"
 	>
 		<PageCarrierCardOwner

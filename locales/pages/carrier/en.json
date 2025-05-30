@@ -14,5 +14,11 @@
             "squadron": "Squadron",
             "squadronfriends": "Squadron & Friends"
         }
+	},
+	"titles": {
+		"section":{
+			"owned": "Your Carriers",
+			"all": "All Carriers"
+		}
 	}
 }

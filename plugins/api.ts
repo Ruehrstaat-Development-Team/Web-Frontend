@@ -9,8 +9,25 @@ export default defineNuxtPlugin({
 			baseURL: config.public.API_BASE_URL,
 			credentials: "include",
 			headers: headers,
-			onRequest: (context) => {
-				const sessionStore = useSessionStore();
+			onRequest: async (context) => {
+				var sessionStore = useSessionStore();
+				var userStore = useUserStore();
+				if (sessionStore.expiresAt) {
+					var expiresAt = new Date(sessionStore.expiresAt);
+					var now = new Date();
+					if (expiresAt <= now) {
+						var sessionToken = await $fetch<SessionToken>(
+							"auth/refresh",
+							{
+								method: "POST",
+							}
+						);
+						sessionStore.setSession(sessionToken);
+					}
+				} else {
+					userStore.setUser(null);
+					sessionStore.setSession(null);
+				}
 				const applicationStore = useVolatileStore();
 				applicationStore.setLoading(true);
 				context.options.headers.append(
