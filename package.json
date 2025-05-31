@@ -22,7 +22,7 @@
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"nuxt": "^3.16.0",
-		"nuxt-i18n-micro": "^1.76.2",
+		"nuxt-i18n-micro": "^1.87.0",
 		"nuxt-lucide-icons": "^1.0.5",
 		"pinia": "^3.0.1",
 		"pinia-plugin-persistedstate": "^4.2.0",

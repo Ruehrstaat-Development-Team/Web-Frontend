@@ -20,6 +20,7 @@ export default defineNuxtPlugin({
 							"auth/refresh",
 							{
 								method: "POST",
+								baseURL: config.public.API_BASE_URL,
 							}
 						);
 						sessionStore.setSession(sessionToken);

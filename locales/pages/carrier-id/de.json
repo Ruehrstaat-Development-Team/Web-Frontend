@@ -17,7 +17,8 @@
 		"dockingaccess-friends": "Nur Freunde",
 		"dockingaccess-squadron": "Nur Staffelmitglieder",
 		"dockingaccess-squadronfriends": "Nur Staffelmitglieder und Freunde",
-		"dockingaccess-none": "Kein Zugang"
+		"dockingaccess-none": "Kein Zugang",
+        "owner": "Besitzer"
 	},
     "services":{
         "refuel": "Auftanken",

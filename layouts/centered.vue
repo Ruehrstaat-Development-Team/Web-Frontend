@@ -5,7 +5,7 @@
 				<ThemeImage
 					dark_src="/BackgroundDark.webp"
 					light_src="/BackgroundLight.webp"
-					class="h-32 w-fit overflow-hidden"
+					class="h-32 w-full overflow-hidden"
 				/>
 				<h1
 					class="text-3xl font-bold text-start absolute bottom-1 left-28 text-white"

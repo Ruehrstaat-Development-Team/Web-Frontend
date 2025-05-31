@@ -17,7 +17,8 @@
 		"dockingaccess-friends": "Friends Only",
 		"dockingaccess-squadron": "Squadron Members Only",
 		"dockingaccess-squadronfriends": "Squadron Members and Friends Only",
-		"dockingaccess-none": "No Access"
+		"dockingaccess-none": "No Access",
+		"owner": "Owner"
 	},
 	"services": {
 		"refuel": "Refuel",

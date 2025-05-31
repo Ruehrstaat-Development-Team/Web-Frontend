@@ -8,9 +8,13 @@ declare global {
         category: string;
         currentLocation: string;
         dockingAccess: string;
+        fuelLevel: number;
         id: string;
         marketId: string;
         name: string;
+        owner: string;
+        ownerId: string;
+        reserveBalance: number;
         services: CarrierService[];
     };
     type CarrierService = {

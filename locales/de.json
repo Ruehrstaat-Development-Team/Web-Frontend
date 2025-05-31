@@ -15,5 +15,8 @@
 		"menu": {
 			"home": "Zurück zur Startseite"
 		}
+	},
+	"common": {
+		"edit": "Bearbeiten"
 	}
 }

@@ -5,42 +5,12 @@
 		</CardHeader>
 		<CardContent>
 			<div class="grid grid-cols-3 gap-4">
-				<div>
-					<p class="text-sm font-medium text-muted-foreground">
-						{{ $t("general-information.name") }}
-					</p>
-					<p class="text-lg font-semibold text-card-foreground">
-						{{ carrier.name }}
-					</p>
-				</div>
-				<div>
-					<p class="text-sm font-medium text-muted-foreground">
-						{{ $t("general-information.callsign") }}
-					</p>
-					<p class="text-lg font-semibold text-card-foreground">
-						{{ carrier.callsign }}
-					</p>
-				</div>
-				<div>
-					<p class="text-sm font-medium text-muted-foreground">
-						{{ $t("general-information.category") }}
-					</p>
-					<p class="text-lg font-semibold text-card-foreground">
-						{{ $t("general-information.category-" + carrier.category) }}
-					</p>
-				</div>
-				<div>
-					<p class="text-sm font-medium text-muted-foreground">
-						{{ $t("general-information.location") }}
-					</p>
-					<p class="text-lg font-semibold text-card-foreground">{{ carrier.currentLocation }}</p>
-				</div>
-				<div>
-					<p class="text-sm font-medium text-muted-foreground">
-						{{ $t("general-information.dockingaccess") }}
-					</p>
-					<p class="text-lg font-semibold text-card-foreground">{{ $t("general-information.dockingaccess-" + carrier.dockingAccess) }}</p>
-				</div>
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.name')" :value="carrier.name" />
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.callsign')" :value="carrier.callsign" />
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.category')" :value="$ts('general-information.category-' + carrier.category)" />
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.location')" :value="carrier.currentLocation" />
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.dockingaccess')" :value="$ts('general-information.dockingaccess-' + carrier.dockingAccess)" />
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.owner')" :value="carrier.owner" />
 			</div>
 		</CardContent>
 	</Card>

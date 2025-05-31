@@ -15,5 +15,8 @@
 		"menu": {
 			"home": "Back to Homepage"
 		}
+	},
+	"common": {
+		"edit": "Edit"
 	}
 }

@@ -30,7 +30,7 @@
 				</DropdownMenuItem>
 				<DropdownMenuItem>
 					<i18n-link
-						:to="{ name: 'login' }"
+						:to="{ name: 'login', query: { redirect: route.fullPath } }"
 						class="flex items-center gap-2 w-full h-full"
 					>
 						<LucideArrowRightFromLine :size="16" />
@@ -45,6 +45,7 @@
 <script lang="ts" setup>
 import { useSidebar } from "~/components/ui/sidebar";
 const { open } = useSidebar();
+const route = useRoute();
 </script>
 
 <style lang="scss" scoped></style>

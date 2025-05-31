@@ -70,7 +70,11 @@ const onSubmit = form.handleSubmit(async (values) => {
 			session.setSession(response);
 			await setUser();
 			toast.success("Login success");
-			router.replace({ name: "index" });
+			if (router.currentRoute.value.query.redirect) {
+				router.push(router.currentRoute.value.query.redirect as string);
+			} else if (router.currentRoute.value.name === "login") {
+				router.push({ name: "index" });
+			}
 		}
 	} catch (e) {
 		toast.error("Login failed");
