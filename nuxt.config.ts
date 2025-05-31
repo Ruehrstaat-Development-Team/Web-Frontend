@@ -15,6 +15,7 @@ export default defineNuxtConfig({
 		"@nuxt/icon",
 		"nuxt-lucide-icons",
 		"nuxt-i18n-micro",
+		"@nuxtjs/device",
 	],
 	app: {
 		head: {

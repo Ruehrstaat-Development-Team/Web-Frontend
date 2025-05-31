@@ -8,7 +8,7 @@
 			<ThemeLanguageSelector />
 		</div>
 	</div>
-	<div class="relative mx-auto" :class="maxWidth">
+	<div class="relative mx-auto max-w-[90%] overflow-hidden" :class="maxWidth">
 		<ThemeImage
 			class="w-full h-44 rounded-lg shadow-md"
 			dark_src="/BackgroundDark.webp"
@@ -40,7 +40,7 @@ defineProps({
 	},
 	maxWidth: {
 		type: String,
-		default: "max-w-7xl",
+		default: "w-[100em]",
 	},
 	backNavigationName: {
 		type: String,

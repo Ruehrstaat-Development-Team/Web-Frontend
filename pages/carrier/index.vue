@@ -1,5 +1,5 @@
 <template>
-	<PageHeader :page-title="$t('carriers') as string"> </PageHeader>
+	<PageHeader :page-title="$ts('carriers')"> </PageHeader>
 	<PageContent>
 		<PageCarrierSectionOwner
 			:carriers="privateData"

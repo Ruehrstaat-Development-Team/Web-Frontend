@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5 mx-auto" :class="maxWidth">
+  <div class="pt-5 mx-auto max-w-[90%]" :class="maxWidth">
     <slot />
   </div>
 </template>
@@ -8,7 +8,7 @@
 defineProps({
   maxWidth: {
     type: String,
-    default: "max-w-7xl",
+    default: "w-[100em]",
   },
 })
 </script>
