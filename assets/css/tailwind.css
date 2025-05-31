@@ -19,6 +19,9 @@
 		--border: 214.3 31.8% 91.4%;
 		--input: 214.3 31.8% 91.4%;
 
+		--button: 268 70% 90%;
+		--button-foreground: 210 40% 2%;
+
 		--primary: 268 70% 50%;
 		--primary-foreground: 222.2 47.4% 100%;
 
@@ -79,6 +82,9 @@
 
 		--border: 268 20% 10%;
 		--input: 217.2 32.6% 17.5%;
+
+		--button: 268 15% 40%;
+		--button-foreground: 210 40% 98%;
 
 		--primary: 268 70% 50%;
 		--primary-foreground: 222.2 47.4% 100%;

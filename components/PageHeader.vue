@@ -1,9 +1,9 @@
 <template>
 	<div
-		class="bg-transparent w-full flex flex-row p-2 items-center sticky top-0 z-10 h-[50px]"
+		class="bg-transparent flex flex-row p-2 items-center sticky top-0 z-10 h-[50px]"
 	>
-		<SidebarTrigger  class="mr-auto"/>
-		<div class="flex flex-row items-center gap-1">
+		<SidebarTrigger/>
+		<div class="flex flex-row items-center gap-1 ml-auto">
 			<ThemeModeSelector />
 			<ThemeLanguageSelector />
 		</div>

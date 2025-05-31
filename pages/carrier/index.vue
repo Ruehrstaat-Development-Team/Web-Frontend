@@ -4,7 +4,6 @@
 		<PageCarrierSectionOwner
 			:carriers="privateData"
 			v-if="privateData != null"
-			class="mb-4"
 		/>
 		<PageCarrierSectionPublic
 			:carriers="publicData"

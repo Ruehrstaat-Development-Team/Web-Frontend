@@ -17,6 +17,11 @@
 		}
 	},
 	"common": {
-		"edit": "Edit"
+		"edit": "Edit",
+		"delete": "Delete",
+		"save": "Save",
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"close": "Close"
 	}
 }

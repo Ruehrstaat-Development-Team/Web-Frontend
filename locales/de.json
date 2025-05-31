@@ -17,6 +17,11 @@
 		}
 	},
 	"common": {
-		"edit": "Bearbeiten"
+		"edit": "Bearbeiten",
+		"delete": "Löschen",
+		"save": "Speichern",
+		"cancel": "Abbrechen",
+		"confirm": "Bestätigen",
+		"close": "Schließen"
 	}
 }
