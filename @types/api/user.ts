@@ -3,12 +3,12 @@ declare global{
         id: string;
         email: string;
         nickname: string;
-        cmdrname: string;
+        cmdrName: string;
         password: string;
-        isadmin: boolean;
+        isAdmin: boolean;
         locale: string;
-        isbanned: boolean;
-        isactivated: boolean;
+        isBanned: boolean;
+        isActivated: boolean;
         activationtoken: string;
         passwordresettoken: string;
         emailchangetoken: string;

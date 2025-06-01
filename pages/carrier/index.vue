@@ -41,7 +41,7 @@ const {
 	error,
 	refresh,
 	clear,
-} = useAsyncData("carrier-index", () => carrierApi.getCarrier(), {
+} = useAsyncData("carrier-index", () => carrierApi.getCarrierGrouped(), {
 	lazy: true,
 	dedupe: "defer",
 	default: () => {

@@ -7,6 +7,12 @@ export const carrierRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
 		});
 	},
 
+	async getCarrierGrouped(): Promise<CarrierGrouped[]> {
+		return fetch<CarrierGrouped[]>("public/carrier/bycategory", {
+			method: "GET",
+		});
+	},
+
 	async getPrivateCarrier(): Promise<Carrier[] | null> {
 		return fetch<Carrier[]>("carrier/", {
 			method: "GET",
@@ -19,8 +25,10 @@ export const carrierRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
 		});
 	},
 
+	
+
 	async getPrivateCarrierById(id: string): Promise<Carrier | null> {
-		return fetch<Carrier>(`carrier/${id}`, {
+		return fetch<Carrier>(`carrier/${id}?full=true`, {
 			method: "GET",
 		});
 	},

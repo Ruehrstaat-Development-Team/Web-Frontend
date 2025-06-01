@@ -1,10 +1,12 @@
 <template>
-	<PageCarrierIDCardGeneralDetails
-		:carrier="carrier"
-		v-if="carrier"
-		class="mb-4"
-	/>
-	<PageCarrierIDCardServices :carrier="carrier" v-if="carrier" />
+	<div>
+		<PageCarrierIDCardGeneralDetails
+			:carrier="carrier"
+			v-if="carrier"
+			class="mb-4"
+		/>
+		<PageCarrierIDCardServices :carrier="carrier" v-if="carrier" />
+	</div>
 </template>
 
 <script lang="ts" setup>

@@ -1,8 +1,10 @@
 import {
+	LucideArrowLeftRight,
 	LucideFileArchive,
 	LucideHome,
 	LucideImages,
 	LucideOctagonAlert,
+	LucideRocket,
 	LucideUsers,
 } from "lucide-vue-next";
 
@@ -16,7 +18,7 @@ export default () => {
 		},
 		{
 			title: "layout-default.menu.carrier",
-			icon: LucideOctagonAlert,
+			icon: LucideRocket,
 			location: { name: "carrier" },
 			urlCompare: "carrier",
 		},
@@ -39,5 +41,16 @@ export default () => {
 			urlCompare: "gallery",
 		},
 	];
-	return items;
+	const bottomItems: SidebarMenuItem[] = [
+		{
+			title: "layout-default.menu.connector",
+			icon: LucideArrowLeftRight,
+			location: { name: "information" },
+			urlCompare: "about",
+		},
+	];
+	return {
+		items,
+		bottomItems,
+	};
 };

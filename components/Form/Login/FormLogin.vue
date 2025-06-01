@@ -35,7 +35,7 @@
 					$t("form-login.login-with-discord")
 				}}</Button
 			>
-			<Button type="submit">{{ $t("form-login.login") }}</Button>
+			<Button variant="primary" type="submit">{{ $t("form-login.login") }}</Button>
 		</div>
 	</form>
 </template>

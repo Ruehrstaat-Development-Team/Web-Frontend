@@ -8,7 +8,8 @@
 			"gallery": "Galerie",
 			"login": "Anmelden",
 			"logout": "Abmelden",
-			"settings": "Einstellungen"
+			"settings": "Einstellungen",
+			"connector": "ED-Connector"
 		}
 	},
 	"layout-centered": {

@@ -4,19 +4,49 @@
 		back-navigation-name="carrier"
 	>
 		<template v-slot:buttons>
-			<Button variant="secondary" v-if="((carrier?.ownerId && carrier?.ownerId === user?.id) || user?.isadmin) && !edit" @click="edit = true" >
-				<LucidePen /> <span >{{ $t("common.edit") }}</span>
+			<Button
+				variant="secondary"
+				v-if="
+					((carrier?.ownerId && carrier?.ownerId === user?.id) ||
+						user?.isAdmin) &&
+					!edit
+				"
+				@click="edit = true"
+			>
+				<LucidePen /> <span>{{ $t("common.edit") }}</span>
 			</Button>
 			<Button variant="secondary" v-if="edit" @click="save">
-				<LucideSave/> <span >{{ $t("common.save") }}</span>
+				<LucideSave /> <span>{{ $t("common.save") }}</span>
 			</Button>
 			<Button variant="default" v-if="edit" @click="edit = false">
-				<LucideX /> <span >{{ $t("common.cancel") }}</span>
+				<LucideX /> <span>{{ $t("common.cancel") }}</span>
 			</Button>
 		</template>
 	</PageHeader>
 	<PageContent>
-		<PageCarrierIDSectionGeneralDetails :carrier="carrier" v-if="carrier" />
+		<div class="flex flex-row gap-4">
+			<div class="flex-grow">
+				<PageCarrierIDSectionGeneralDetails
+					:carrier="carrier"
+					v-if="carrier"
+					class="mb-4"
+				/>
+				<PageCarrierIDSectionFuelAndCargo
+					:carrier="carrier"
+					v-if="carrier"
+				/>
+			</div>
+			<!-- <div>
+				<Card>
+					<CardHeader>
+						<CardTitle>{{ $t("card-titles.route") }}</CardTitle>
+					</CardHeader>
+					<CardContent>
+						<span class="text-lg font-semibold whitespace-nowrap"> - Step1 - Sowiio ABC 1</span>
+					</CardContent>
+				</Card>
+			</div> -->
+		</div>
 	</PageContent>
 </template>
 
@@ -31,7 +61,7 @@ const edit = ref(false);
 
 const save = async () => {
 	edit.value = false;
-}
+};
 
 const {
 	data: carrier,
@@ -48,7 +78,7 @@ const {
 		return carrierApi.getCarrierById(id);
 	},
 	{
-		dedupe: "defer",
+		dedupe: "cancel",
 		transform: (data) => {
 			if (data) {
 				data.services.sort((a, b) =>
@@ -62,7 +92,7 @@ const {
 
 app.hook("auth:logout", () => {
 	edit.value = false;
-  refresh();
+	refresh();
 });
 </script>
 

@@ -1,7 +1,10 @@
 {
     "card-titles": {
         "general-information": "Allgemeine Informationen",
-        "services": "Dienstleistungen"
+        "services": "Dienstleistungen",
+        "cargo": "Fracht",
+        "fuel": "Treibstoff",
+        "route": "FLugplan"
     },
     "general-information":{
 		"name": "Name",
@@ -18,7 +21,8 @@
 		"dockingaccess-squadron": "Nur Staffelmitglieder",
 		"dockingaccess-squadronfriends": "Nur Staffelmitglieder und Freunde",
 		"dockingaccess-none": "Kein Zugang",
-        "owner": "Besitzer"
+        "owner": "Besitzer",
+        "no-owner": "Keine Besitzerinformationen verfügbar"
 	},
     "services":{
         "refuel": "Auftanken",
@@ -36,5 +40,11 @@
         "odyssey-only": "Benötigt Odyssey DLC",
         "odyssey-free": "Benötigt kein Odyssey DLC",
         "no-services": "Keine Dienstleistungen für diesen Träger verfügbar."
+    },
+    "cargo": {
+        "description": "Die Frachtkapazität eines Trägers setzt sich aus allen installierten Modulen und der Menge der Fracht zusammen."
+    },
+    "fuel": {
+        "description": "Die Treibstoffkapazität eines Trägers beschränkt sich nur auf das Treibstoffdepot. Treibstoff im Frachtlager wird nicht berücksichtigt."
     }
 }

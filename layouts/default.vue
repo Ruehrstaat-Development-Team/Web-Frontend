@@ -1,7 +1,7 @@
 <template>
   <SidebarProvider @update:open="openUpdated" :default-open="persistentStore.sidebarOpen">
     <NavigationSidebar />
-    <main class="relative transition-width duration-300" :style="{ 'width': persistentStore.sidebarOpen ? 'calc(100% - var(--sidebar-width))' : 'calc(100% - var(--sidebar-width-icon))' }">
+    <main class="relative transition-width duration-300 mb-4" :class="{ 'open': persistentStore.sidebarOpen, 'closed': !persistentStore.sidebarOpen }">
       <slot />
     </main>
   </SidebarProvider>
@@ -15,5 +15,17 @@ const openUpdated = function (open: boolean) {
 </script>
 
 <style lang="scss" scoped>
-
+@media (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+}
+@media (min-width: 769px) {
+  main.open {
+    width: calc(100% - var(--sidebar-width));
+  }
+  main.closed {
+    width: calc(100% - var(--sidebar-width-icon));
+  }
+}
 </style>

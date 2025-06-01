@@ -1,10 +1,16 @@
 import { defineStore } from 'pinia'
 
 export const usePersistentStore = defineStore("persistent", {
-    state: () => ({ sidebarOpen: true }),
+    state: () => ({ 
+        sidebarOpen: true,
+        isDesktopApp: false,
+     }),
     actions: {
         setSidebarOpen(open: boolean) {
             this.sidebarOpen = open;
+        },
+        setIsDesktopApp(isDesktop: boolean) {
+            this.isDesktopApp = isDesktop;
         },
     },
     persist: {

@@ -10,7 +10,7 @@
 				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.category')" :value="$ts('general-information.category-' + carrier.category)" />
 				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.location')" :value="carrier.currentLocation" />
 				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.dockingaccess')" :value="$ts('general-information.dockingaccess-' + carrier.dockingAccess)" />
-				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.owner')" :value="carrier.owner" />
+				<PageCarrierIDItemGeneralInformationLabeledText :label="$ts('general-information.owner')" :value="carrier.owner || $ts('general-information.no-owner')" />
 			</div>
 		</CardContent>
 	</Card>

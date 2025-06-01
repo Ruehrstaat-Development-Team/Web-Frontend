@@ -1,7 +1,10 @@
 {
 	"card-titles": {
 		"general-information": "General Information",
-		"services": "Services"
+		"services": "Services",
+		"cargo": "Cargo",
+		"fuel": "Fuel",
+		"route": "Flight Plan"
 	},
 	"general-information": {
 		"name": "Name",
@@ -18,7 +21,8 @@
 		"dockingaccess-squadron": "Squadron Members Only",
 		"dockingaccess-squadronfriends": "Squadron Members and Friends Only",
 		"dockingaccess-none": "No Access",
-		"owner": "Owner"
+		"owner": "Owner",
+		"no-owner": "No owner information available"
 	},
 	"services": {
 		"refuel": "Refuel",
@@ -36,5 +40,11 @@
 		"odyssey-only": "Odyssey DLC Required",
 		"odyssey-free": "No Odyssey DLC Required",
         "no-services": "No services available for this carrier."
+	},
+	"cargo": {
+		"description": "The cargo capacity of a carrier is determined by all installed modules and the amount of cargo."
+	},
+	"fuel": {
+		"description": "The fuel capacity of a carrier is limited to the fuel depot only. Fuel in the cargo hold is not considered."
 	}
 }

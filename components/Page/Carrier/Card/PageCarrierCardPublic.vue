@@ -1,10 +1,10 @@
 <template>
 	<i18n-link :to="{name: 'carrier-id', params: {id: carrier.id}}">
 		<Card
-			class="h-64 flex flex-col min-w-64 transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl"
+			class="h-64 flex flex-col min-w-64 transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl relative"
 		>
 			<ThemeImage
-				class="w-full min-h-28 mb-3 rounded-t-md"
+				class="w-full h-32 mb-3 rounded-t-md"
 				dark_src="/BackgroundDark.webp"
 				light_src="/BackgroundLight.webp"
 				alt="Ruehrstaat Squadron Banner Background"
