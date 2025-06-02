@@ -4,16 +4,13 @@
 			:style="{ width: progress + '%', background: color }"
 			class="h-full transition-all duration-300 ease-in-out overflow-hidden"
 			:class="{ 'bg-primary': color === null }"
-		>
-	</div>
+		></div>
 	</div>
 	<div class="w-full flex flex-row items-center justify-between mt-1">
 		<span class="text-xs text-muted-foreground" v-if="dataString != null">{{
 			dataString
 		}}</span>
-		<span class="text-xs text-muted-foreground"
-			>{{ progress }}%</span
-		>
+		<span class="text-xs text-muted-foreground">{{ progress }}%</span>
 	</div>
 </template>
 
@@ -27,10 +24,6 @@ defineProps({
 		default: null,
 	},
 	color: {
-		type: String,
-		default: null,
-	},
-	textColor: {
 		type: String,
 		default: null,
 	},

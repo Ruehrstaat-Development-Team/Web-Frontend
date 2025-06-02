@@ -16,6 +16,7 @@ export default defineNuxtConfig({
 		"nuxt-lucide-icons",
 		"nuxt-i18n-micro",
 		"@nuxtjs/device",
+		"reka-ui/nuxt",
 	],
 	app: {
 		head: {

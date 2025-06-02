@@ -1,21 +1,32 @@
 <template>
 	<div
-		class="bg-transparent flex flex-row p-2 items-center sticky top-0 z-10 h-[50px]"
+		class="bg-transparent flex flex-row p-2 items-center fixed top-0 z-10 h-[50px] header transition-width duration-200 ease-linear"
+		:class="{
+			open: persistentStore.sidebarOpen,
+			closed: !persistentStore.sidebarOpen,
+		}"
 	>
-		<SidebarTrigger/>
-		<div class="flex flex-row items-center gap-1 ml-auto">
+		<SidebarTrigger />
+		<div class="flex flex-col items-center gap-2 ml-auto self-start">
 			<ThemeModeSelector />
 			<ThemeLanguageSelector />
 		</div>
 	</div>
-	<div class="relative mx-auto max-w-[90%] overflow-hidden" :class="maxWidth">
+	<div
+		class="relative mx-auto overflow-hidden mt-12 maxWidth"
+		:class="maxWidth"
+	>
 		<ThemeImage
 			class="w-full h-44 rounded-lg shadow-md"
 			dark_src="/BackgroundDark.webp"
 			light_src="/BackgroundLight.webp"
 			alt="Ruehrstaat Squadron Banner Background"
 		/>
-		<i18n-link :to="{ name: backNavigationName}" v-if="backNavigationName" class="absolute top-0 left-0 p-5">
+		<i18n-link
+			:to="{ name: backNavigationName }"
+			v-if="backNavigationName"
+			class="absolute top-0 left-0 p-5"
+		>
 			<LucideArrowLeft class="text-white" />
 		</i18n-link>
 		<h1
@@ -23,16 +34,17 @@
 		>
 			{{ pageTitle }}
 		</h1>
-		<slot name="header-image"/>
+		<slot name="header-image" />
 		<div
 			class="flex flex-row items-center justify-start absolute bottom-0 right-0 p-5 gap-2"
 		>
-			<slot name="buttons"/>
+			<slot name="buttons" />
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
+const persistentStore = usePersistentStore();
 defineProps({
 	pageTitle: {
 		type: String,
@@ -67,5 +79,22 @@ defineProps({
 	100% {
 		transform: translateX(calc(100% + 20px)) scaleX(0.3);
 	}
+}
+@media (max-width: 768px) {
+	.header {
+		width: 100%;
+	}
+}
+@media (min-width: 769px) {
+	.header.open {
+		width: calc(100% - var(--sidebar-width));
+	}
+	.header.closed {
+		width: calc(100% - var(--sidebar-width-icon));
+	}
+}
+
+.maxWidth {
+	max-width: calc(90% - calc(var(--spacing) * 7));
 }
 </style>

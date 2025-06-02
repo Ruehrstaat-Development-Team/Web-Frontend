@@ -3,7 +3,6 @@
 		:progress="progress"
 		:dataString="dataString"
 		:color="color"
-		:textColor="textColor"
 		v-if="progress != null"
 	/>
 	<DefaultProgressDataMulti
@@ -22,10 +21,6 @@ defineProps({
 		default: null,
 	},
 	color: {
-		type: String,
-		default: null,
-	},
-	textColor: {
 		type: String,
 		default: null,
 	},
