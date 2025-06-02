@@ -36,9 +36,9 @@
 					v-if="carrier"
 				/>
 			</div>
-			<div>
-				<!-- <PageCarrierIDCardRoute/> -->
-			</div>
+			<!-- <div>
+				<PageCarrierIDCardRoute/>
+			</div> -->
 		</div>
 	</PageContent>
 </template>
