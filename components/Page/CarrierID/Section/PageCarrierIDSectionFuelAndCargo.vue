@@ -6,13 +6,12 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
+defineProps({
 	carrier: {
 		type: Object as PropType<Carrier>,
 		required: true,
 	},
 });
-console.log(props.carrier);
 </script>
 
 <style lang="scss" scoped>
