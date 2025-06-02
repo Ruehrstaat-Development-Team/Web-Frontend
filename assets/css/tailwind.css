@@ -2,131 +2,129 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-	:root {
-		--background: 268 30% 90%;
-		--foreground: 222.2 84% 4.9%;
+:root {
+	--background: hsl(268 30% 90%);
+	--foreground: hsl(222.2 84% 4.9%);
 
-		--muted: 210 40% 96.1%;
-		--muted-foreground: 215.4 16.3% 46.9%;
+	--muted: hsl(210 40% 96.1%);
+	--muted-foreground: hsl(215.4 16.3% 46.9%);
 
-		--popover: 0 0% 100%;
-		--popover-foreground: 222.2 84% 4.9%;
+	--popover: hsl(0 0% 100%);
+	--popover-foreground: hsl(222.2 84% 4.9%);
 
-		--card: 0 0% 100%;
-		--card-foreground: 222.2 84% 4.9%;
+	--card: hsl(0 0% 100%);
+	--card-foreground: hsl(222.2 84% 4.9%);
 
-		--border: 214.3 31.8% 91.4%;
-		--input: 214.3 31.8% 91.4%;
+	--border: hsl(214.3 31.8% 91.4%);
+	--input: hsl(214.3 31.8% 91.4%);
 
-		--button: 268 70% 90%;
-		--button-foreground: 210 40% 2%;
+	--button: hsl(268 70% 90%);
+	--button-foreground: hsl(210 40% 2%);
 
-		--primary: 268 70% 50%;
-		--primary-foreground: 222.2 47.4% 100%;
+	--primary: hsl(268 70% 50%);
+	--primary-foreground: hsl(222.2 47.4% 100%);
 
-		--secondary: 59 80% 60%;
-		--secondary-foreground: 210 40% 0%;
+	--secondary: hsl(59 80% 60%);
+	--secondary-foreground: hsl(210 40% 0%);
 
-		--accent: 210 40% 96.1%;
-		--accent-foreground: 222.2 47.4% 11.2%;
+	--accent: hsl(210 40% 96.1%);
+	--accent-foreground: hsl(222.2 47.4% 11.2%);
 
-		--destructive: 0 90.2% 37.5%;
-		--destructive-foreground: 210 50% 98%;
+	--destructive: hsl(0 90.2% 37.5%);
+	--destructive-foreground: hsl(210 50% 98%);
 
-		--ring: 222.2 84% 4.9%;
+	--ring: hsl(222.2 84% 4.9%);
 
-		--radius: 0.5rem;
+	--radius: 0.5rem;
 
-		--sidebar-background: 0 0% 98%;
-		--sidebar-foreground: 240 5.3% 26.1%;
-		--sidebar-primary: 268 20% 94%;
-		--sidebar-primary-foreground: 0 0% 98%;
-		--sidebar-accent: 268 5% 87%;
-		--sidebar-accent-foreground: 240 5.9% 10%;
-		--sidebar-border: 220 13% 91%;
-		--sidebar-ring: 217.2 91.2% 59.8%;
+	--sidebar-background: hsl(0 0% 98%);
+	--sidebar-foreground: hsl(240 5.3% 26.1%);
+	--sidebar-primary: hsl(268 20% 94%);
+	--sidebar-primary-foreground: hsl(0 0% 98%);
+	--sidebar-accent: hsl(268 5% 87%);
+	--sidebar-accent-foreground: hsl(240 5.9% 10%);
+	--sidebar-border: hsl(220 13% 91%);
+	--sidebar-ring: hsl(217.2 91.2% 59.8%);
 
-		[data-rich-colors="true"][data-sonner-toast] {
-			/*TODO: Find out how to set Theme variable in '''layouts/default.vue''' sonner from colorMode*/
-			--success-bg: hsl(110, 69%, 87%);
-			--success-border: hsl(110, 48%, 75%);
-			--success-text: hsl(120 100% 5%);
+	[data-rich-colors="true"][data-sonner-toast] {
+		/*TODO: Find out how to set Theme variable in '''layouts/default.vue''' sonner from colorMode*/
+		--success-bg: hsl(110, 69%, 87%);
+		--success-border: hsl(110, 48%, 75%);
+		--success-text: hsl(120 100% 5%);
 
-			--warning-bg: hsl(41, 84%, 87%);
-			--warning-border: hsl(40, 58%, 67%);
-			--warning-text: hsl(40 100% 5%);
+		--warning-bg: hsl(41, 84%, 87%);
+		--warning-border: hsl(40, 58%, 67%);
+		--warning-text: hsl(40 100% 5%);
 
-			--error-bg: hsl(0, 100%, 84%);
-			--error-border: hsl(0, 97%, 75%);
-			--error-text: hsl(0, 100%, 2%);
+		--error-bg: hsl(0, 100%, 84%);
+		--error-border: hsl(0, 97%, 75%);
+		--error-text: hsl(0, 100%, 2%);
 
-			--info-bg: hsl(209, 89%, 89%);
-			--info-border: hsl(210, 86%, 80%);
-			--info-text: hsl(210 100% 5%);
-		}
+		--info-bg: hsl(209, 89%, 89%);
+		--info-border: hsl(210, 86%, 80%);
+		--info-text: hsl(210 100% 5%);
 	}
+}
 
-	.dark {
-		--background: 268 30% 5%;
-		--foreground: 210 40% 98%;
+.dark {
+	--background: hsl(268 30% 5%);
+	--foreground: hsl(210 40% 98%);
 
-		--muted: 268 35% 20%;
-		--muted-foreground: 215 20.2% 70.1%;
+	--muted: hsl(268 35% 20%);
+	--muted-foreground: hsl(215 20.2% 70.1%);
 
-		--popover: 268 15% 13%;
-		--popover-foreground: 210 40% 100%;
+	--popover: hsl(268 15% 13%);
+	--popover-foreground: hsl(210 40% 100%);
 
-		--card: 268 20% 15%;
-		--card-foreground: 210 40% 98%;
+	--card: hsl(268 20% 15%);
+	--card-foreground: hsl(210 40% 98%);
 
-		--border: 268 20% 10%;
-		--input: 217.2 32.6% 17.5%;
+	--border: hsl(268 20% 10%);
+	--input: hsl(217.2 32.6% 17.5%);
 
-		--button: 268 15% 40%;
-		--button-foreground: 210 40% 98%;
+	--button: hsl(268 15% 40%);
+	--button-foreground: hsl(210 40% 98%);
 
-		--primary: 268 70% 50%;
-		--primary-foreground: 222.2 47.4% 100%;
+	--primary: hsl(268 70% 50%);
+	--primary-foreground: hsl(222.2 47.4% 100%);
 
-		--secondary: 59 100% 65%;
-		--secondary-foreground: 210 40% 0%;
+	--secondary: hsl(59 100% 65%);
+	--secondary-foreground: hsl(210 40% 0%);
 
-		--accent: 268 32.6% 17.5%;
-		--accent-foreground: 210 40% 98%;
+	--accent: hsl(268 32.6% 17.5%);
+	--accent-foreground: hsl(210 40% 98%);
 
-		--destructive: 0 80.8% 45%;
-		--destructive-foreground: 210 40% 98%;
+	--destructive: hsl(0 80.8% 45%);
+	--destructive-foreground: hsl(210 40% 98%);
 
-		--ring: 212.7 26.8% 83.9%;
+	--ring: hsl(212.7 26.8% 83.9%);
 
-		--sidebar-background: 240 5.9% 10%;
-		--sidebar-foreground: 240 4.8% 95.9%;
-		--sidebar-primary: 268 3% 12%;
-		--sidebar-primary-foreground: 0 0% 100%;
-		--sidebar-accent: 240 3.7% 15.9%;
-		--sidebar-accent-foreground: 240 4.8% 95.9%;
-		--sidebar-border: 240 3.7% 15.9%;
-		--sidebar-ring: 217.2 91.2% 59.8%;
+	--sidebar-background: hsl(240 5.9% 10%);
+	--sidebar-foreground: hsl(240 4.8% 95.9%);
+	--sidebar-primary: hsl(268 3% 12%);
+	--sidebar-primary-foreground: hsl(0 0% 100%);
+	--sidebar-accent: hsl(240 3.7% 15.9%);
+	--sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+	--sidebar-border: hsl(240 3.7% 15.9%);
+	--sidebar-ring: hsl(217.2 91.2% 59.8%);
 
-		[data-rich-colors="true"][data-sonner-toast] {
-			/*TODO: Find out how to set Theme variable in '''layouts/default.vue''' sonner from colorMode*/
-			--success-bg: hsl(109, 95%, 9%);
-			--success-border: hsl(110, 100%, 16%);
-			--success-text: hsl(120 100% 95%);
+	[data-rich-colors="true"][data-sonner-toast] {
+		/*TODO: Find out how to set Theme variable in '''layouts/default.vue''' sonner from colorMode*/
+		--success-bg: hsl(109, 95%, 9%);
+		--success-border: hsl(110, 100%, 16%);
+		--success-text: hsl(120 100% 95%);
 
-			--warning-bg: hsl(40, 79%, 13%);
-			--warning-border: hsl(40, 96%, 18%);
-			--warning-text: hsl(40 100% 95%);
+		--warning-bg: hsl(40, 79%, 13%);
+		--warning-border: hsl(40, 96%, 18%);
+		--warning-text: hsl(40 100% 95%);
 
-			--error-bg: hsl(0, 94%, 12%);
-			--error-border: hsl(0, 96%, 19%);
-			--error-text: hsl(0 100% 95%);
+		--error-bg: hsl(0, 94%, 12%);
+		--error-border: hsl(0, 96%, 19%);
+		--error-text: hsl(0 100% 95%);
 
-			--info-bg: hsl(210, 46%, 11%);
-			--info-border: hsl(210, 98%, 17%);
-			--info-text: hsl(210 100% 95%);
-		}
+		--info-bg: hsl(210, 46%, 11%);
+		--info-border: hsl(210, 98%, 17%);
+		--info-text: hsl(210 100% 95%);
 	}
 }
 
@@ -142,4 +140,63 @@
 @font-face {
 	font-family: "Primal";
 	src: url("/Primal.woff2") format("woff2");
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-button: var(--button);
+	--color-button-foreground: var(--button-foreground);
+
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+
+	--color-secondary: var(--secondary);
+	--color-secondary-foreground: var(--secondary-foreground);
+
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+
+	--color-ring: var(--ring);
+	--color-radius: var(--radius);
+
+	--color-sidebar-background: var(--sidebar-background);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+
+	--color-success-bg: var(--success-bg);
+	--color-success-border: var(--success-border);
+	--color-success-text: var(--success-text);
+
+	--color-warning-bg: var(--warning-bg);
+	--color-warning-border: var(--warning-border);
+	--color-warning-text: var(--warning-text);
+
+	--color-error-bg: var(--error-bg);
+	--color-error-border: var(--error-border);
+	--color-error-text: var(--error-text);
+
+	--color-info-bg: var(--info-bg);
+	--color-info-border: var(--info-border);
+	--color-info-text: var(--info-text);
 }
