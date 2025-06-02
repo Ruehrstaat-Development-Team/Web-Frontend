@@ -1,8 +1,11 @@
 <template>
-  <div class="grid grid-cols-2 gap-4">
-    <PageCarrierIDCardFuel :level="carrier.fuelLevel" v-if="carrier.fuelLevel != null"/>
-    <PageCarrierIDCardCargo :carrier="carrier" />
-  </div>
+	<div class="grid grid-cols-2 gap-4">
+		<PageCarrierIDCardFuel
+			:level="carrier.fuelLevel"
+			v-if="carrier.fuelLevel != null"
+		/>
+		<PageCarrierIDCardCargo :carrier="carrier" />
+	</div>
 </template>
 
 <script lang="ts" setup>
@@ -14,6 +17,4 @@ defineProps({
 });
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
