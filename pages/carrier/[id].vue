@@ -24,8 +24,8 @@
 		</template>
 	</PageHeader>
 	<PageContent>
-		<div class="flex flex-row gap-4">
-			<div class="flex-grow">
+		<div class="flex flex-col gap-4 @5xl/main:flex-row">
+			<div class="flex-grow @container/carrier-section">
 				<PageCarrierIDSectionGeneralDetails
 					:carrier="carrier"
 					v-if="carrier"
@@ -36,16 +36,9 @@
 					v-if="carrier"
 				/>
 			</div>
-			<!-- <div>
-				<Card>
-					<CardHeader>
-						<CardTitle>{{ $t("card-titles.route") }}</CardTitle>
-					</CardHeader>
-					<CardContent>
-						<span class="text-lg font-semibold whitespace-nowrap"> - Step1 - Sowiio ABC 1</span>
-					</CardContent>
-				</Card>
-			</div> -->
+			<div>
+				<!-- <PageCarrierIDCardRoute/> -->
+			</div>
 		</div>
 	</PageContent>
 </template>

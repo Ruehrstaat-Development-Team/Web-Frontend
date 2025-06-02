@@ -1,5 +1,5 @@
 <template>
-	<div class="grid grid-cols-2 gap-4">
+	<div class="grid grid-cols-1 @2xl/carrier-section:grid-cols-2 gap-4">
 		<PageCarrierIDCardFuel
 			:level="carrier.fuelLevel"
 			v-if="carrier.fuelLevel != null"

@@ -13,7 +13,7 @@
 		</div>
 	</div>
 	<div
-		class="relative mx-auto overflow-hidden mt-12 maxWidth"
+		class="relative mx-auto overflow-hidden mt-8 maxWidth"
 		:class="maxWidth"
 	>
 		<ThemeImage
