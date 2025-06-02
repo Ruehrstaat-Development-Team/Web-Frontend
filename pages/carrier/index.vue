@@ -33,7 +33,7 @@ const app = useNuxtApp();
 app.hook("auth:logout", () => {
 	privateClear();
 	refresh();
-})
+});
 
 const {
 	data: publicData,
@@ -46,6 +46,17 @@ const {
 	dedupe: "defer",
 	default: () => {
 		return null;
+	},
+	transform: (data) => {
+		return data.sort((a, b) => {
+			if (a.category === "other") return 1;
+			if (b.category === "other") return -1;
+			if (a.category === "flagship") return -1;
+			if (b.category === "flagship") return 1;
+			if (a.category < b.category) return -1;
+			if (a.category > b.category) return 1;
+			return 0;
+		});
 	},
 });
 

@@ -1,5 +1,5 @@
 <template>
-	<i18n-link :to="{name: 'carrier-id', params: {id: carrier.id}}">
+	<i18n-link :to="{ name: 'carrier-id', params: { id: carrier.id } }">
 		<Card
 			class="h-64 flex flex-col min-w-64 transition-all duration-300 cursor-pointer shadow-md hover:shadow-xl relative"
 		>
@@ -15,7 +15,7 @@
 						{{ carrier.name }} ({{ carrier.callsign }})
 					</div>
 					<div class="ml-2">
-						<Badge>{{
+						<Badge class="whitespace-nowrap">{{
 							$t("carrier.category." + carrier.category)
 						}}</Badge>
 					</div>

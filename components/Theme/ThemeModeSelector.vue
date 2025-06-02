@@ -2,7 +2,7 @@
 	<DropdownMenu>
 		<DropdownMenuTrigger>
 			<ClientOnly>
-				<Button variant="ghost">
+				<Button variant="ghost" class="size-7 p-0">
 					<LucideMoon v-if="$colorMode.preference == 'dark'" />
 					<LucideSun v-else-if="$colorMode.preference == 'light'" />
 					<LucideMonitorCog v-else />

@@ -2,7 +2,11 @@
 	<SidebarMenuItem>
 		<SidebarMenuButton
 			:tooltip="item.title"
-			:is-active="route.name?.toString().startsWith('localized-'+item.urlCompare)"
+			:is-active="
+				route.name
+					?.toString()
+					.startsWith('localized-' + item.urlCompare)
+			"
 			as-child
 		>
 			<i18n-link
