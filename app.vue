@@ -2,7 +2,7 @@
 const route = useRoute();
 const router = useRouter();
 const persist = usePersistentStore();
-if(route.query.isDesktop === 'true'){
+if (route.query.isDesktop === "true") {
   persist.setIsDesktopApp(true);
   router.replace({ query: { ...route.query, isDesktop: undefined } });
 }
@@ -14,6 +14,6 @@ if(route.query.isDesktop === 'true'){
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
-    <Toaster rich-colors/>
+    <Toaster rich-colors />
   </div>
 </template>

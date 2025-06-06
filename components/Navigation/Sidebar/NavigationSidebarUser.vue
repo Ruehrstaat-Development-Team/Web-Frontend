@@ -1,6 +1,6 @@
 <template>
-	<NavigationSidebarUserLoggedOut v-if="!store.user" />
-	<NavigationSidebarUserLoggedIn v-else :user="store.user" />
+  <NavigationSidebarUserLoggedOut v-if="!store.user" />
+  <NavigationSidebarUserLoggedIn v-else :user="store.user" />
 </template>
 
 <script lang="ts" setup>

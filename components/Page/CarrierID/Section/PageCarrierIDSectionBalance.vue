@@ -1,19 +1,14 @@
 <template>
-  <PageCarrierIDCardBalance
-    :carrier="carrier"
-    v-if="carrier"
-  />
+  <PageCarrierIDCardBalance :carrier="carrier" v-if="carrier" />
 </template>
 
 <script lang="ts" setup>
 defineProps({
-	carrier: {
-		type: Object as PropType<Carrier>,
-		required: true,
-	},
+  carrier: {
+    type: Object as PropType<Carrier>,
+    required: true,
+  },
 });
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

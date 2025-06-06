@@ -1,6 +1,6 @@
 {
     "trailingComma": "es5",
-    "tabWidth": 4,
+    "tabWidth": 2,
     "semi": true,
     "singleQuote": false,
     "printWidth": 80,
@@ -14,10 +14,6 @@
     "jsxSingleQuote": false,
     "jsxBracketSameLine": false,
     "embeddedLanguageFormatting": "auto",
-    "plugins": [
-        "prettier-plugin-tailwindcss"
-    ],
-    "tailwindConfig": "./tailwind.config.js",
     "overrides": [
         {
             "files": "*.json",

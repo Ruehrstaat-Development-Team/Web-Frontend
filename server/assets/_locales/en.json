@@ -12,11 +12,7 @@
       "connector": "ED-Connector"
     }
   },
-  "layout-centered": {
-    "menu": {
-      "home": "Back to Homepage"
-    }
-  },
+  "layout-centered": { "menu": { "home": "Back to Homepage" } },
   "common": {
     "edit": "Edit",
     "delete": "Delete",

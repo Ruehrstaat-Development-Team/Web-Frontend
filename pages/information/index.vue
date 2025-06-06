@@ -1,7 +1,5 @@
 <template>
-  <PageHeader page-title="Information Database">
-
-  </PageHeader>
+  <PageHeader page-title="Information Database"> </PageHeader>
 </template>
 
 <script lang="ts" setup>
@@ -16,6 +14,4 @@ useHead({
 });
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

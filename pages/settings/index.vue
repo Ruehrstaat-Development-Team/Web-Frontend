@@ -1,6 +1,5 @@
 <template>
-  <PageHeader pageTitle="Settings">
-  </PageHeader>
+  <PageHeader pageTitle="Settings"> </PageHeader>
 </template>
 
 <script lang="ts" setup>
@@ -15,6 +14,4 @@ useHead({
 });
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

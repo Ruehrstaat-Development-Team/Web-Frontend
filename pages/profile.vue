@@ -1,16 +1,14 @@
 <template>
-  <PageHeader page-title="Profile">
-
-  </PageHeader>
+  <PageHeader page-title="Profile"> </PageHeader>
   <PageContent>
     <Card>
       <CardHeader>
         <h2 class="text-lg font-semibold">Profile Information</h2>
       </CardHeader>
       <CardContent>
-        	<span>{{ user?.isAdmin }}</span>
-        	<span>{{ user?.cmdrName }}</span>
-        	<span>{{ user?.email }}</span>
+        <span>{{ user?.isAdmin }}</span>
+        <span>{{ user?.cmdrName }}</span>
+        <span>{{ user?.email }}</span>
       </CardContent>
     </Card>
   </PageContent>
@@ -30,6 +28,4 @@ useHead({
 });
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

@@ -2,7 +2,10 @@
   <Collapsible class="group/collapsible">
     <SidebarMenuItem>
       <CollapsibleTrigger as-child>
-        <SidebarMenuButton :tooltip="item.title" :is-active="route.path.includes(item.urlCompare)">
+        <SidebarMenuButton
+          :tooltip="item.title"
+          :is-active="route.path.includes(item.urlCompare)"
+        >
           <component :is="item.icon" />
           <span>{{ item.title }}</span>
           <LucideChevronRight
@@ -17,7 +20,7 @@
             :key="subitem.location.name"
             :is-active="route.path.includes(subitem.urlCompare)"
           >
-            <SidebarMenuSubButton :tooltip="subitem.title" >
+            <SidebarMenuSubButton :tooltip="subitem.title">
               <i18n-link :to="subitem.location" class="w-full">
                 <span>{{ subitem.title }}</span>
               </i18n-link>

@@ -1,11 +1,11 @@
-import { defineStore } from 'pinia'
+import { defineStore } from "pinia";
 
 export const useVolatileStore = defineStore("volatile", {
-    state: () => ({ loading: false }),
-    actions: {
-        setLoading(loading: boolean) {
-            this.loading = loading;
-        }
+  state: () => ({ loading: false }),
+  actions: {
+    setLoading(loading: boolean) {
+      this.loading = loading;
     },
-    persist: false
+  },
+  persist: false,
 });

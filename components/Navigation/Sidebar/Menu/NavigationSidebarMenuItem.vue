@@ -1,7 +1,10 @@
 <template>
   <SidebarMenu>
-    <NavigationSidebarMenuItemCollapsible :item="selectedItem" v-if="selectedItem.children"/>
-    <NavigationSidebarMenuItemStatic :item="selectedItem" v-else/>
+    <NavigationSidebarMenuItemCollapsible
+      :item="selectedItem"
+      v-if="selectedItem.children"
+    />
+    <NavigationSidebarMenuItemStatic :item="selectedItem" v-else />
   </SidebarMenu>
 </template>
 
