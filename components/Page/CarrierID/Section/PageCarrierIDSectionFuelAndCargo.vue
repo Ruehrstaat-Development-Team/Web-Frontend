@@ -4,7 +4,7 @@
 			:level="carrier.fuelLevel"
 			v-if="carrier.fuelLevel != null"
 		/>
-		<PageCarrierIDCardCargo :carrier="carrier" />
+		<PageCarrierIDCardCargo :carrier="carrier" v-if="carrier.cargoSpace != null"/>
 	</div>
 </template>
 

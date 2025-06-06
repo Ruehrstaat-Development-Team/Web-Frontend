@@ -34,7 +34,11 @@
 				<PageCarrierIDSectionFuelAndCargo
 					:carrier="carrier"
 					v-if="carrier"
+					class="mb-4"
 				/>
+				<PageCarrierIDSectionBalance
+					:carrier="carrier"
+					v-if="carrier"/>
 			</div>
 			<!-- <div>
 				<PageCarrierIDCardRoute/>
@@ -82,6 +86,16 @@ const {
 		},
 	}
 );
+
+useHead({
+		title: carrier?.value?.name || "Carrier",
+		meta: [
+			{
+				name: "description",
+				content: `View and manage the carrier ${carrier?.value?.name || ""}.`,
+			},
+		],
+	});
 
 app.hook("auth:logout", () => {
 	edit.value = false;

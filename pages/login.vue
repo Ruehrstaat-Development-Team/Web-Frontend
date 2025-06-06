@@ -18,9 +18,17 @@
 
 <script lang="ts" setup>
 definePageMeta({
-	layout: "centered",
-	title: "Login | Rührstaat Squadron",
-	description: "Login to your Rührstaat Squadron account",
+	layout: "centered"
+});
+
+useHead({
+	title: "Login | Ruehrstaat Squadron",
+	meta: [
+		{
+			name: "description",
+			content: "Login to the Ruehrstaat Squadron",
+		},
+	],
 });
 
 const selectedTab = ref("login");

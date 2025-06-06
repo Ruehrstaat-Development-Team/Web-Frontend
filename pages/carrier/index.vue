@@ -17,7 +17,7 @@ definePageMeta({
 	keepalive: true,
 });
 useHead({
-	title: "Carrier",
+	title: "Carrier | Ruehrstaat Squadron",
 	meta: [
 		{
 			name: "description",

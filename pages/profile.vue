@@ -18,6 +18,16 @@
 
 <script lang="ts" setup>
 var { user } = useUserStore();
+
+useHead({
+  title: "Profile | Ruehrstaat Squadron",
+  meta: [
+    {
+      name: "description",
+      content: "View and manage your profile information.",
+    },
+  ],
+});
 </script>
 
 <style lang="scss" scoped>

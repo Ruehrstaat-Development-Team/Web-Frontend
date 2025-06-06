@@ -4,7 +4,8 @@
         "services": "Dienstleistungen",
         "cargo": "Fracht",
         "fuel": "Treibstoff",
-        "route": "FLugplan"
+        "route": "FLugplan",
+        "balance": "Kontostand"
     },
     "general-information":{
 		"name": "Name",

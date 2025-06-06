@@ -4,7 +4,8 @@
 		"services": "Services",
 		"cargo": "Cargo",
 		"fuel": "Fuel",
-		"route": "Flight Plan"
+		"route": "Flight Plan",
+		"balance": "Balance"
 	},
 	"general-information": {
 		"name": "Name",

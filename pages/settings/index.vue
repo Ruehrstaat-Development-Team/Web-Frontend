@@ -4,9 +4,15 @@
 </template>
 
 <script lang="ts" setup>
-import PageHeader from '~/components/PageHeader.vue';
-
-
+useHead({
+  title: "Settings | Ruehrstaat Squadron",
+  meta: [
+    {
+      name: "description",
+      content: "Manage your account settings and preferences.",
+    },
+  ],
+});
 </script>
 
 <style lang="scss" scoped>
