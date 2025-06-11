@@ -1,9 +1,18 @@
 <template>
-  <PageHeader :page-title="$ts('carriers')"> </PageHeader>
+  <PageHeader :page-title="$ts('carriers')">
+    <template v-slot:buttons>
+      <I18nLink :to="{ name: 'carrier-new' }">
+        <Button variant="secondary" v-if="user?.isAdmin">
+          <LucidePlus />
+          <span>{{ $t("common.create") }}</span>
+        </Button>
+      </I18nLink>
+    </template>
+  </PageHeader>
   <PageContent>
     <PageCarrierSectionOwner
       :carriers="privateData"
-      v-if="privateData != null"
+      v-if="privateData != null && privateData.length > 0"
     />
     <PageCarrierSectionPublic
       :carriers="publicData"
@@ -28,6 +37,7 @@ useHead({
 const { $api } = useNuxtApp();
 const carrierApi = carrierRepository($api);
 const session = useSessionStore();
+const { user } = useUserStore();
 const app = useNuxtApp();
 
 app.hook("auth:logout", () => {

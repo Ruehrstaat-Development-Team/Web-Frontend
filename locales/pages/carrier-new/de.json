@@ -1,4 +1,5 @@
 {
+  "title": "Neuer Flottenträger",
   "card-titles": {
     "general-information": "Allgemeine Informationen",
     "services": "Dienstleistungen",
@@ -41,14 +42,5 @@
     "odyssey-only": "Benötigt Odyssey DLC",
     "odyssey-free": "Benötigt kein Odyssey DLC",
     "no-services": "Keine Dienstleistungen für diesen Träger verfügbar."
-  },
-  "cargo": {
-    "description": "Die Frachtkapazität eines Trägers setzt sich aus allen installierten Modulen und der Menge der Fracht zusammen."
-  },
-  "fuel": {
-    "description": "Die Treibstoffkapazität eines Trägers beschränkt sich nur auf das Treibstoffdepot. Treibstoff im Frachtlager wird nicht berücksichtigt."
-  },
-  "balance": {
-    "reserved-of": "reserviert von"
   }
 }

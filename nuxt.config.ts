@@ -66,8 +66,8 @@ export default defineNuxtConfig({
     meta: true,
     autoDetectLanguage: true,
     strategy: "prefix_and_default",
-    disableWatcher: true,
-    disableUpdater: true,
+    disableWatcher: false,
+    disableUpdater: false,
   },
   //#endregion Module Configuration
 

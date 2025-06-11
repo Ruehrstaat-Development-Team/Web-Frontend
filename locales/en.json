@@ -23,6 +23,7 @@
     "save": "Save",
     "cancel": "Cancel",
     "confirm": "Confirm",
-    "close": "Close"
+    "close": "Close",
+    "create": "Create"
   }
 }

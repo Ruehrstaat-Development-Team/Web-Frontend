@@ -6,21 +6,9 @@
     <CardContent>
       <div class="flex flex-col gap-4">
         <DefaultProgressData
-          :label="$ts('balance.current-balance')"
-          :items="[
-            {
-              name: $ts('balance.reserved-balance'),
-              value: (carrier.reserveBalance / carrier.balance) * 100,
-              color: 'green',
-              dataString: $tn(carrier.reserveBalance) + ' cr',
-            },
-            {
-              name: $ts('balance.available-balance'),
-              value: (carrier.availableBalance / carrier.balance) * 100,
-              color: 'blue',
-              dataString: $tn(carrier.availableBalance) + ' cr',
-            },
-          ]"
+          :progress="carrier.balance != 0 ? (carrier.reserveBalance / carrier.balance) * 100 : 0"
+          :dataString="`${$tn(carrier.reserveBalance)} cr ${$ts('balance.reserved-of')} ${$tn(carrier.balance)} cr`"
+          color="var(--secondary)"
         />
       </div>
     </CardContent>

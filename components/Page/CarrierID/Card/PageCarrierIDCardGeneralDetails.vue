@@ -3,24 +3,40 @@
     <CardHeader>
       <CardTitle>{{ $t("card-titles.general-information") }}</CardTitle>
     </CardHeader>
-    <CardContent>
-      <div class="grid grid-cols-3 gap-4">
-        <DefaultLabeledText
+    <CardContent class="@container">
+      <div class="grid grid-cols-1 @xs:grid-cols-2 @xl:grid-cols-3 gap-4">
+        <DefaultLabeledEditableText
           :label="$ts('general-information.name')"
-          :value="carrier.name"
-        />
-        <DefaultLabeledText
+          :edit="edit"
+          name="name"
+          v-slot="componentField"
+        >
+          <Input type="text" v-bind="componentField" />
+        </DefaultLabeledEditableText>
+        <DefaultLabeledEditableText
           :label="$ts('general-information.callsign')"
-          :value="carrier.callsign"
-        />
-        <DefaultLabeledText
+          :edit="edit"
+          name="callsign"
+          v-slot="componentField"
+        >
+          <Input type="text" v-bind="componentField" />
+        </DefaultLabeledEditableText>
+        <DefaultLabeledEditableText
           :label="$ts('general-information.category')"
-          :value="$ts('general-information.category-' + carrier.category)"
-        />
-        <DefaultLabeledText
+          :edit="edit"
+          name="category"
+          v-slot="componentField"
+        >
+          <Input type="text" v-bind="componentField" />
+        </DefaultLabeledEditableText>
+        <DefaultLabeledEditableText
           :label="$ts('general-information.location')"
-          :value="carrier.currentLocation"
-        />
+          :edit="edit"
+          name="currentLocation"
+          v-slot="componentField"
+        >
+          <Input type="text" v-bind="componentField" />
+        </DefaultLabeledEditableText>
         <DefaultLabeledText
           :label="$ts('general-information.dockingaccess')"
           :value="
@@ -37,10 +53,16 @@
 </template>
 
 <script lang="ts" setup>
+import { Carrier } from "~/@types/api/carrier";
 defineProps({
   carrier: {
     type: Object as PropType<Carrier>,
     required: true,
+  },
+  edit: {
+    type: Boolean,
+    required: false,
+    default: false,
   },
 });
 </script>

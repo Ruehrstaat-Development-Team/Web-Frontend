@@ -1,31 +1,27 @@
 <template>
   <form @submit="onSubmit">
-    <FormField v-slot="{ componentField }" name="email">
-      <FormItem>
-        <FormLabel>{{ $t("form-login.email") }}</FormLabel>
-        <FormMessage />
-        <FormControl>
-          <Input
-            type="email"
-            :placeholder="$t('form-login.email')"
-            v-bind="componentField"
-          />
-        </FormControl>
-      </FormItem>
-    </FormField>
-    <FormField v-slot="{ componentField }" name="password">
-      <FormItem>
-        <FormLabel>{{ $t("form-login.password") }}</FormLabel>
-        <FormMessage />
-        <FormControl>
-          <Input
-            type="password"
-            :placeholder="$t('form-login.password')"
-            v-bind="componentField"
-          />
-        </FormControl>
-      </FormItem>
-    </FormField>
+    <DefaultLabeledInput
+      :label="$ts('form-login.email')"
+      name="email"
+      v-slot="componentField"
+    >
+      <Input
+        type="email"
+        :placeholder="$t('form-login.email')"
+        v-bind="componentField"
+      />
+    </DefaultLabeledInput>
+    <DefaultLabeledInput
+      :label="$ts('form-login.password')"
+      name="password"
+      v-slot="componentField"
+    >
+      <Input
+        type="password"
+        :placeholder="$t('form-login.password')"
+        v-bind="componentField"
+      />
+    </DefaultLabeledInput>
     <div class="flex flex-row justify-end mt-3 gap-2">
       <Button
         type="button"
@@ -73,9 +69,12 @@ const onSubmit = form.handleSubmit(async (values) => {
       await setUser();
       toast.success("Login success");
       if (router.currentRoute.value.query.redirect) {
-        router.push(router.currentRoute.value.query.redirect as string);
+        router.push({
+          path: router.currentRoute.value.query.redirect as string,
+          replace: true,
+        });
       } else if (router.currentRoute.value.name === "login") {
-        router.push({ name: "index" });
+        router.push({ name: "index", replace: true });
       }
     }
   } catch (e) {

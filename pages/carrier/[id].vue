@@ -25,6 +25,7 @@
       <div class="flex-grow @container/carrier-section">
         <PageCarrierIDSectionGeneralDetails
           :carrier="carrier"
+          :edit="edit"
           v-if="carrier"
           class="mb-4"
         />
@@ -49,7 +50,7 @@ const { id } = useRoute().params as { id: string };
 const session = useSessionStore();
 const { user } = useUserStore();
 const app = useNuxtApp();
-const edit = ref(false);
+const edit = ref(true);
 
 const save = async () => {
   edit.value = false;

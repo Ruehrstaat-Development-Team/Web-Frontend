@@ -1,5 +1,5 @@
 <template>
-  <PageCarrierIDCardBalance :carrier="carrier" v-if="carrier" />
+  <PageCarrierIDCardBalance :carrier="carrier" v-if="carrier.balance != null" />
 </template>
 
 <script lang="ts" setup>

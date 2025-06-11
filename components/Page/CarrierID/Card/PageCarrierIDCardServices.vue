@@ -3,9 +3,9 @@
     <CardHeader>
       <CardTitle>{{ $t("card-titles.services") }}</CardTitle>
     </CardHeader>
-    <CardContent>
+    <CardContent class="@container">
       <div
-        class="grid grid-cols-3 gap-4"
+        class="grid grid-cols-1 gap-4 @xs:grid-cols-2 @xl:grid-cols-3"
         v-if="carrier.services && carrier.services.length > 0"
       >
         <div

@@ -47,5 +47,8 @@
   },
   "fuel": {
     "description": "The fuel capacity of a carrier is limited to the fuel depot only. Fuel in the cargo hold is not considered."
+  },
+  "balance": {
+    "reserved-of": "reserved of"
   }
 }

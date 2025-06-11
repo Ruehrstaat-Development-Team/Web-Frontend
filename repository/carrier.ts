@@ -30,4 +30,10 @@ export const carrierRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
       method: "GET",
     });
   },
+
+  async getAllCarrierServices(): Promise<CarrierService[]> {
+    return fetch<CarrierService[]>("carrier/service", {
+      method: "GET",
+    });
+  }
 });
