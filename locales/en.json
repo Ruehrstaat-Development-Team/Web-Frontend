@@ -33,5 +33,10 @@
     "email": "Please enter a valid email address.",
     "number": "Please enter a valid number.",
     "url": "Please enter a valid URL."
+  },
+  "toasts": {
+    "info": {
+      "restricted-site": "This page is only accessible to administrators."
+    }
   }
 }

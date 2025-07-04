@@ -43,4 +43,10 @@ export const carrierRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
       method: "GET",
     });
   },
+
+  async getCarrierDockingAccessOptions(): Promise<string[]> {
+    return fetch<string[]>("carrier/docking", {
+      method: "GET",
+    });
+  },
 });

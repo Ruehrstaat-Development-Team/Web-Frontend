@@ -1,0 +1,8 @@
+{
+  "carriers": "Carriers",
+  "carrier": {
+    "category": { "flagship": "Flagship", "supportvessel": "Support Vessel", "freighter": "Freighter", "other": "Other" },
+    "dockingaccess": { "all": "All", "none": "None", "friends": "Friends", "squadron": "Squadron", "squadronfriends": "Squadron & Friends" }
+  },
+  "titles": { "section": { "owned": "Your Carriers", "all": "All Carriers" } }
+}
