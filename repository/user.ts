@@ -6,4 +6,9 @@ export const userRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
       method: "GET",
     });
   },
+  async getAllUsers(): Promise<User[]> {
+    return fetch<User[]>("users/admin", {
+      method: "GET",
+    });
+  },
 });

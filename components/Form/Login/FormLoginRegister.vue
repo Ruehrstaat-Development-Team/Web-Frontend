@@ -5,11 +5,7 @@
         <FormLabel>{{ $t("form-register.nickname") }}</FormLabel>
         <FormMessage />
         <FormControl>
-          <Input
-            type="text"
-            :placeholder="$t('form-register.nickname')"
-            v-bind="componentField"
-          />
+          <Input type="text" :placeholder="$t('form-register.nickname')" v-bind="componentField" />
         </FormControl>
       </FormItem>
     </FormField>
@@ -18,11 +14,7 @@
         <FormLabel>{{ $t("form-register.cmdr-name") }}</FormLabel>
         <FormMessage />
         <FormControl>
-          <Input
-            type="text"
-            :placeholder="$t('form-register.cmdr-name')"
-            v-bind="componentField"
-          />
+          <Input type="text" :placeholder="$t('form-register.cmdr-name')" v-bind="componentField" />
         </FormControl>
       </FormItem>
     </FormField>
@@ -31,11 +23,7 @@
         <FormLabel>{{ $t("form-register.email") }}</FormLabel>
         <FormMessage />
         <FormControl>
-          <Input
-            type="email"
-            :placeholder="$t('form-register.email')"
-            v-bind="componentField"
-          />
+          <Input type="email" :placeholder="$t('form-register.email')" v-bind="componentField" />
         </FormControl>
       </FormItem>
     </FormField>
@@ -44,11 +32,7 @@
         <FormLabel>{{ $t("form-register.password") }}</FormLabel>
         <FormMessage />
         <FormControl>
-          <Input
-            type="password"
-            :placeholder="$t('form-register.password')"
-            v-bind="componentField"
-          />
+          <Input type="password" :placeholder="$t('form-register.password')" v-bind="componentField" />
         </FormControl>
       </FormItem>
     </FormField>

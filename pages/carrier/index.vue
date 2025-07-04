@@ -10,14 +10,8 @@
     </template>
   </PageHeader>
   <PageContent>
-    <PageCarrierSectionOwner
-      :carriers="privateData"
-      v-if="privateData != null && privateData.length > 0"
-    />
-    <PageCarrierSectionPublic
-      :carriers="publicData"
-      v-if="publicData != null"
-    />
+    <PageCarrierSectionOwner :carriers="privateData" v-if="privateData != null && privateData.length > 0" />
+    <PageCarrierSectionPublic :carriers="publicData" v-if="publicData != null" />
   </PageContent>
 </template>
 

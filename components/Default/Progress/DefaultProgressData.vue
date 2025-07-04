@@ -1,14 +1,6 @@
 <template>
-  <DefaultProgressDataSingle
-    :progress="progress"
-    :dataString="dataString"
-    :color="color"
-    v-if="progress != null"
-  />
-  <DefaultProgressDataMulti
-    :items="items"
-    v-else-if="items != null && items.length > 0"
-  />
+  <DefaultProgressDataSingle :progress="progress" :dataString="dataString" :color="color" v-if="progress != null" />
+  <DefaultProgressDataMulti :items="items" v-else-if="items != null && items.length > 0" />
 </template>
 
 <script lang="ts" setup>
@@ -25,9 +17,7 @@ defineProps({
     default: null,
   },
   items: {
-    type: Array as PropType<
-      Array<{ name: string; value: number; color: string; dataString?: string }>
-    >,
+    type: Array as PropType<Array<{ name: string; value: number; color: string; dataString?: string }>>,
     default: null,
   },
 });

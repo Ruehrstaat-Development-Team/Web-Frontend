@@ -6,18 +6,12 @@
     <SidebarContent>
       <SidebarGroup>
         <SidebarGroupContent>
-          <NavigationSidebarMenuItem
-            v-for="item in navigationItems.items"
-            :selected-item="item"
-          />
+          <NavigationSidebarMenuItem v-for="item in navigationItems.items" :selected-item="item" />
         </SidebarGroupContent>
       </SidebarGroup>
       <SidebarGroup class="mt-auto" v-if="persistentStore.isDesktopApp">
         <SidebarGroupContent>
-          <NavigationSidebarMenuItem
-            v-for="item in navigationItems.bottomItems"
-            :selected-item="item"
-          />
+          <NavigationSidebarMenuItem v-for="item in navigationItems.bottomItems" :selected-item="item" />
         </SidebarGroupContent>
       </SidebarGroup>
     </SidebarContent>

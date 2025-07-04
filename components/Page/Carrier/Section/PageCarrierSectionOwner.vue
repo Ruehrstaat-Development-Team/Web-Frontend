@@ -2,16 +2,8 @@
   <h3 class="text-2xl font-bold mb-4">
     {{ $t("titles.section.owned") }}
   </h3>
-  <div
-    class="flex flex-row flex-nowrap overflow-x-auto gap-4 mb-4"
-    :class="{ 'scrollbar-set': isChromiumBrowser() }"
-    @wheel.prevent="scrollHorizontally"
-  >
-    <PageCarrierCardOwner
-      v-for="carrier in carriers"
-      :carrier="carrier"
-      v-if="carriers != null"
-    />
+  <div class="flex flex-row flex-nowrap overflow-x-auto gap-4 mb-4" :class="{ 'scrollbar-set': isChromiumBrowser() }" @wheel.prevent="scrollHorizontally">
+    <PageCarrierCardOwner v-for="carrier in carriers" :carrier="carrier" v-if="carriers != null" />
     <Skeleton v-else />
   </div>
 </template>

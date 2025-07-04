@@ -1,10 +1,7 @@
 <template>
-  <PageHeader :page-title="$ts('title')"> </PageHeader>
+  <PageHeader :page-title="$ts('title')" back-navigation-name="carrier"> </PageHeader>
   <PageContent>
-    <form>
-      <PageCarrierIDCardGeneralDetails :carrier="carrier" :edit="edit" />
-    </form>
-    {{ form }}
+    <PageCarrierIDCardGeneralDetails :model-value="carrier" :edit="edit" :user-options="users ?? undefined" :category-options="categoryOptions ?? undefined" />
   </PageContent>
 </template>
 
@@ -13,15 +10,14 @@ import { Carrier } from "~/@types/api/carrier";
 
 const { $api } = useNuxtApp();
 const carrierApi = carrierRepository($api);
+const userApi = userRepository($api);
+
 const { data: services } = useAsyncData("carrier-services", carrierApi.getAllCarrierServices);
+const { data: users } = useAsyncData("carrier-users", userApi.getAllUsers);
+const { data: categoryOptions } = useAsyncData("carrier-categories", carrierApi.getAllCarrierCategories);
 
 const carrier = ref<Carrier>(new Carrier());
 const edit = ref(true);
-
-const formSchema = useCarrierIdForm();
-const form = useForm({
-  validationSchema: formSchema,
-});
 </script>
 
 <style lang="scss" scoped></style>

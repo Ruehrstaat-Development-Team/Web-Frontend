@@ -1,4 +1,5 @@
 import type { NitroFetchRequest, $Fetch } from "nitropack";
+import type { Carrier, CarrierGrouped, CarrierService } from "~/@types/api/carrier";
 
 export const carrierRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
   async getCarrier(): Promise<Carrier[]> {
@@ -35,5 +36,11 @@ export const carrierRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
     return fetch<CarrierService[]>("carrier/service", {
       method: "GET",
     });
-  }
+  },
+
+  async getAllCarrierCategories(): Promise<string[]> {
+    return fetch<string[]>("carrier/category", {
+      method: "GET",
+    });
+  },
 });

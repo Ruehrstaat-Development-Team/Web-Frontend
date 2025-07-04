@@ -18,11 +18,8 @@ export const authRepository = <T>(fetch: $Fetch<T, NitroFetchRequest>) => ({
     });
   },
   async beginDiscordLogin(returnUrl: string): Promise<DiscordResponse> {
-    return fetch<DiscordResponse>(
-      "auth/login/discord?redirect_to=" + encodeURIComponent(returnUrl),
-      {
-        method: "GET",
-      }
-    );
+    return fetch<DiscordResponse>("auth/login/discord?redirect_to=" + encodeURIComponent(returnUrl), {
+      method: "GET",
+    });
   },
 });

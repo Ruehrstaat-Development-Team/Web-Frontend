@@ -1,11 +1,6 @@
 <template>
   <div>
-    <PageCarrierIDCardGeneralDetails
-      :carrier="carrier"
-      v-if="carrier"
-      class="mb-4",
-      :edit="edit"
-    />
+    <PageCarrierIDCardGeneralDetails :carrier="carrier" v-if="carrier" class="mb-4" , :edit="edit" />
     <PageCarrierIDCardServices :carrier="carrier" v-if="carrier" />
   </div>
 </template>

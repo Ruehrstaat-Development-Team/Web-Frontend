@@ -1,9 +1,6 @@
 <template>
   <DropdownMenu>
-    <DropdownMenuTrigger
-      class="hover:bg-sidebar-accent rounded-md transition-[padding] duration-200"
-      :class="{ 'p-2': open, 'p-[2px]': !open }"
-    >
+    <DropdownMenuTrigger class="hover:bg-sidebar-accent rounded-md transition-[padding] duration-200" :class="{ 'p-2': open, 'p-[2px]': !open }">
       <NavigationSidebarUserProfile :user="user">
         <LucideChevronsUpDown :size="16" />
       </NavigationSidebarUserProfile>
@@ -21,18 +18,12 @@
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuItem>
-          <i18n-link
-            :to="{ name: 'settings' }"
-            class="flex items-center gap-2 w-full h-full"
-          >
+          <i18n-link :to="{ name: 'settings' }" class="flex items-center gap-2 w-full h-full">
             <LucideSettings :size="16" />
             <span>{{ $t("layout-default.menu.settings") }}</span>
           </i18n-link>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          @click="logout()"
-          class="text-destructive focus:bg-destructive focus:text-destructive-foreground"
-        >
+        <DropdownMenuItem @click="logout()" class="text-destructive focus:bg-destructive focus:text-destructive-foreground">
           <LucideArrowLeftFromLine :size="16" />
           <span>{{ $t("layout-default.menu.logout") }}</span>
         </DropdownMenuItem>

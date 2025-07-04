@@ -4,11 +4,7 @@
       <CardTitle>{{ $t("card-titles.fuel") }}</CardTitle>
     </CardHeader>
     <CardContent>
-      <DefaultProgressData
-        :progress="level / 10"
-        :dataString="level + 't / 1000t'"
-        color="var(--secondary)"
-      />
+      <DefaultProgressData :progress="level / 10" :dataString="level + 't / 1000t'" color="var(--secondary)" />
     </CardContent>
     <CardFooter>
       <div class="text-sm text-muted-foreground">

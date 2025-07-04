@@ -25,5 +25,13 @@
     "confirm": "Confirm",
     "close": "Close",
     "create": "Create"
+  },
+  "validation": {
+    "required": "This field is required.",
+    "minLength": "Minimum length is {0} characters.",
+    "maxLength": "Maximum length is {0} characters.",
+    "email": "Please enter a valid email address.",
+    "number": "Please enter a valid number.",
+    "url": "Please enter a valid URL."
   }
 }

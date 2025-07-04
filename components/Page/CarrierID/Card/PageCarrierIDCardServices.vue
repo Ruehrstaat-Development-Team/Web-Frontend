@@ -4,15 +4,8 @@
       <CardTitle>{{ $t("card-titles.services") }}</CardTitle>
     </CardHeader>
     <CardContent class="@container">
-      <div
-        class="grid grid-cols-1 gap-4 @xs:grid-cols-2 @xl:grid-cols-3"
-        v-if="carrier.services && carrier.services.length > 0"
-      >
-        <div
-          v-for="service in carrier.services"
-          :key="service.name"
-          class="flex flex-row items-start gap-2"
-        >
+      <div class="grid grid-cols-1 gap-4 @xs:grid-cols-2 @xl:grid-cols-3" v-if="carrier.services && carrier.services.length > 0">
+        <div v-for="service in carrier.services" :key="service.name" class="flex flex-row items-start gap-2">
           <TooltipProvider>
             <Tooltip v-if="service.odyssey">
               <TooltipTrigger>

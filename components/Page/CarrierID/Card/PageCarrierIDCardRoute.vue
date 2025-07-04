@@ -7,15 +7,9 @@
       </CardTitle>
     </CardHeader>
     <CardContent>
-      <Stepper
-        orientation="vertical"
-        :model-value="3"
-        class="flex flex-col gap-10 relative"
-      >
+      <Stepper orientation="vertical" :model-value="3" class="flex flex-col gap-10 relative">
         <StepperItem :step="1" class="relative">
-          <StepperSeparator
-            class="absolute left-[18px] top-[40px] block h-[100%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-secondary"
-          />
+          <StepperSeparator class="absolute left-[18px] top-[40px] block h-[100%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-secondary" />
           <StepperIndicator
             class="group-data-[state=completed]:border-secondary group-data-[state=completed]:border-2 group-data-[state=inactive]:bg-primary/20 group-data-[state=active]:bg-secondary group-data-[state=active]:text-secondary-foreground"
           >
@@ -26,9 +20,7 @@
           </div>
         </StepperItem>
         <StepperItem :step="2" class="relative">
-          <StepperSeparator
-            class="absolute left-[18px] top-[40px] block h-[100%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-secondary"
-          />
+          <StepperSeparator class="absolute left-[18px] top-[40px] block h-[100%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-secondary" />
           <StepperIndicator
             class="group-data-[state=completed]:border-secondary group-data-[state=completed]:border-2 group-data-[state=inactive]:bg-primary/20 group-data-[state=active]:bg-secondary group-data-[state=active]:text-secondary-foreground"
           >
@@ -40,9 +32,7 @@
           </div>
         </StepperItem>
         <StepperItem :step="3" class="relative">
-          <StepperSeparator
-            class="absolute left-[18px] top-[40px] block h-[100%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-primary"
-          />
+          <StepperSeparator class="absolute left-[18px] top-[40px] block h-[100%] w-0.5 shrink-0 rounded-full bg-muted group-data-[state=completed]:bg-primary" />
           <StepperIndicator
             class="group-data-[state=completed]:border-primary group-data-[state=completed]:border-2 group-data-[state=inactive]:bg-primary/20 group-data-[state=completed]:bg-primary/50 group-data-[state=active]:bg-secondary group-data-[state=active]:text-secondary-foreground"
           >

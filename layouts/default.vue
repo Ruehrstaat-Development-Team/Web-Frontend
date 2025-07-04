@@ -1,8 +1,5 @@
 <template>
-  <SidebarProvider
-    @update:open="openUpdated"
-    :default-open="persistentStore.sidebarOpen"
-  >
+  <SidebarProvider @update:open="openUpdated" :default-open="persistentStore.sidebarOpen">
     <NavigationSidebar />
     <main
       class="relative transition-width duration-300 mb-4 overflow-hidden @container/main"

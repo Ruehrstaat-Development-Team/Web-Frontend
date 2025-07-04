@@ -1,15 +1,6 @@
 <template>
-  <DefaultLabeledText
-    :label="label"
-    :value="formattedValue ?? name"
-    v-if="!edit"
-  />
-  <DefaultLabeledInput
-    :label="label"
-    :name="name"
-    v-if="edit && name"
-    v-slot="componentField"
-  >
+  <DefaultLabeledText :label="label" :value="formattedValue ?? name" v-if="!edit" />
+  <DefaultLabeledInput :label="label" :name="name" v-if="edit && name" v-slot="componentField">
     <slot v-bind="componentField" />
   </DefaultLabeledInput>
 </template>

@@ -25,5 +25,13 @@
     "confirm": "Bestätigen",
     "close": "Schließen",
     "create": "Erstellen"
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich.",
+    "minLength": "Mindestlänge ist {0} Zeichen.",
+    "maxLength": "Maximallänge ist {0} Zeichen.",
+    "email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "number": "Bitte geben Sie eine gültige Nummer ein.",
+    "url": "Bitte geben Sie eine gültige URL ein."
   }
 }

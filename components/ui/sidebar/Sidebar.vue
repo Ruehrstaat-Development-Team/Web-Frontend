@@ -18,25 +18,11 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
 </script>
 
 <template>
-  <div
-    v-if="collapsible === 'none'"
-    :class="
-      cn(
-        'flex h-full w-[var(--sidebar-width)] flex-col bg-sidebar-background text-sidebar-foreground',
-        props.class
-      )
-    "
-    v-bind="$attrs"
-  >
+  <div v-if="collapsible === 'none'" :class="cn('flex h-full w-[var(--sidebar-width)] flex-col bg-sidebar-background text-sidebar-foreground', props.class)" v-bind="$attrs">
     <slot />
   </div>
 
-  <Sheet
-    v-else-if="isMobile"
-    :open="openMobile"
-    v-bind="$attrs"
-    @update:open="setOpenMobile"
-  >
+  <Sheet v-else-if="isMobile" :open="openMobile" v-bind="$attrs" @update:open="setOpenMobile">
     <SheetContent
       data-sidebar="sidebar"
       data-mobile="true"
@@ -52,14 +38,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
     </SheetContent>
   </Sheet>
 
-  <div
-    v-else
-    class="group peer hidden md:block"
-    :data-state="state"
-    :data-collapsible="state === 'collapsed' ? collapsible : ''"
-    :data-variant="variant"
-    :data-side="side"
-  >
+  <div v-else class="group peer hidden md:block" :data-state="state" :data-collapsible="state === 'collapsed' ? collapsible : ''" :data-variant="variant" :data-side="side">
     <!-- This is what handles the sidebar gap on desktop  -->
     <div
       :class="
@@ -77,9 +56,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
       :class="
         cn(
           'duration-200 fixed inset-y-0 z-10 hidden h-svh w-[var(--sidebar-width)] transition-[left,right,width] ease-linear md:flex',
-          side === 'left'
-            ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]'
-            : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',
+          side === 'left' ? 'left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]' : 'right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]',
           // Adjust the padding for floating and inset variants.
           variant === 'floating' || variant === 'inset'
             ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'

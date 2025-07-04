@@ -28,10 +28,7 @@ export default defineNuxtPlugin({
         }
         const applicationStore = useVolatileStore();
         applicationStore.setLoading(true);
-        context.options.headers.append(
-          "Authorization",
-          "Bearer " + sessionStore.token
-        );
+        context.options.headers.append("Authorization", "Bearer " + sessionStore.token);
       },
       onRequestError: () => {
         const applicationStore = useVolatileStore();

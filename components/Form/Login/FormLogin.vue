@@ -1,39 +1,14 @@
 <template>
   <form @submit="onSubmit">
-    <DefaultLabeledInput
-      :label="$ts('form-login.email')"
-      name="email"
-      v-slot="componentField"
-    >
-      <Input
-        type="email"
-        :placeholder="$t('form-login.email')"
-        v-bind="componentField"
-      />
+    <DefaultLabeledInput :label="$ts('form-login.email')" name="email" v-slot="componentField">
+      <Input type="email" :placeholder="$t('form-login.email')" v-bind="componentField" />
     </DefaultLabeledInput>
-    <DefaultLabeledInput
-      :label="$ts('form-login.password')"
-      name="password"
-      v-slot="componentField"
-    >
-      <Input
-        type="password"
-        :placeholder="$t('form-login.password')"
-        v-bind="componentField"
-      />
+    <DefaultLabeledInput :label="$ts('form-login.password')" name="password" v-slot="componentField">
+      <Input type="password" :placeholder="$t('form-login.password')" v-bind="componentField" />
     </DefaultLabeledInput>
     <div class="flex flex-row justify-end mt-3 gap-2">
-      <Button
-        type="button"
-        class="bg-[#5865f2] hover:bg-[#4650c0]"
-        @click="loginWithDiscord()"
-        ><Icon name="rst:discord" />{{
-          $t("form-login.login-with-discord")
-        }}</Button
-      >
-      <Button variant="primary" type="submit">{{
-        $t("form-login.login")
-      }}</Button>
+      <Button type="button" class="bg-[#5865f2] hover:bg-[#4650c0]" @click="loginWithDiscord()"><Icon name="rst:discord" />{{ $t("form-login.login-with-discord") }}</Button>
+      <Button variant="primary" type="submit">{{ $t("form-login.login") }}</Button>
     </div>
   </form>
 </template>
@@ -84,9 +59,7 @@ const onSubmit = form.handleSubmit(async (values) => {
 
 const loginWithDiscord = async () => {
   try {
-    var response = await auth.beginDiscordLogin(
-      "http://localhost:3000/auth/callbacks/discord"
-    );
+    var response = await auth.beginDiscordLogin("http://localhost:3000/auth/callbacks/discord");
     if (response && response.url) {
       toast.success("Login with Discord success");
       window.location.href = response.url;

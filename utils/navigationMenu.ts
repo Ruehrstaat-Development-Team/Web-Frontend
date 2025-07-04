@@ -1,12 +1,4 @@
-import {
-  LucideArrowLeftRight,
-  LucideFileArchive,
-  LucideHome,
-  LucideImages,
-  LucideOctagonAlert,
-  LucideRocket,
-  LucideUsers,
-} from "lucide-vue-next";
+import { LucideArrowLeftRight, LucideFileArchive, LucideHome, LucideImages, LucideOctagonAlert, LucideRocket, LucideUsers } from "lucide-vue-next";
 
 export default () => {
   const items: SidebarMenuItem[] = [
