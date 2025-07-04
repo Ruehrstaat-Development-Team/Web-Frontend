@@ -1,1 +1,25 @@
-{"layout-default":{"menu":{"home":"Home","carrier":"Carrier","information":"Information Database","commanders":"Commanders","gallery":"Gallery","login":"Login","logout":"Logout","settings":"Settings","connector":"ED-Connector"}},"layout-centered":{"menu":{"home":"Back to Homepage"}},"common":{"edit":"Edit","delete":"Delete","save":"Save","cancel":"Cancel","confirm":"Confirm","close":"Close","create":"Create"},"validation":{"required":"This field is required.","minLength":"Minimum length is {0} characters.","maxLength":"Maximum length is {0} characters.","email":"Please enter a valid email address.","number":"Please enter a valid number.","url":"Please enter a valid URL."}}
+{
+  "layout-default": {
+    "menu": {
+      "home": "Home",
+      "carrier": "Carrier",
+      "information": "Information Database",
+      "commanders": "Commanders",
+      "gallery": "Gallery",
+      "login": "Login",
+      "logout": "Logout",
+      "settings": "Settings",
+      "connector": "ED-Connector"
+    }
+  },
+  "layout-centered": { "menu": { "home": "Back to Homepage" } },
+  "common": { "edit": "Edit", "delete": "Delete", "save": "Save", "cancel": "Cancel", "confirm": "Confirm", "close": "Close", "create": "Create" },
+  "validation": {
+    "required": "This field is required.",
+    "minLength": "Minimum length is {0} characters.",
+    "maxLength": "Maximum length is {0} characters.",
+    "email": "Please enter a valid email address.",
+    "number": "Please enter a valid number.",
+    "url": "Please enter a valid URL."
+  }
+}

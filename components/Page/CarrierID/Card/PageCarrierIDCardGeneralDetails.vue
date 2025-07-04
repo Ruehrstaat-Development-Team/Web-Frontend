@@ -14,6 +14,9 @@
         <DefaultLabeledEditableText :label="$ts('general-information.category')" :edit="edit" name="category" v-slot="componentField">
           <Select>
             <SelectTrigger>
+              
+              
+              
               <SelectValue :placeholder="$ts('general-information.category')" v-bind="componentField" />
             </SelectTrigger>
             <SelectContent>
