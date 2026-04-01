@@ -94,6 +94,12 @@ export default defineNuxtConfig({
         telemetry: false,
       }),
     ],
+    optimizeDeps: {
+      include: [
+        '@sentry/vue',
+        'uuid',
+      ]
+    },
   },
   //Deployment
   devtools: {
