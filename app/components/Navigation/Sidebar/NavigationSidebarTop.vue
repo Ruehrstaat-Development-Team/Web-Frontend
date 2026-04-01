@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import { useSidebar } from "~/components/ui/sidebar";
+import { useSidebar } from "@/components/ui/sidebar";
 const { open, isMobile } = useSidebar();
 </script>
 

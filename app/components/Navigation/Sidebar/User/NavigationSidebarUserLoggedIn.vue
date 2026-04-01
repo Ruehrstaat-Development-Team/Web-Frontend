@@ -34,7 +34,7 @@
 
 <script lang="ts" setup>
 import { toast } from "vue-sonner";
-import { useSidebar } from "~/components/ui/sidebar";
+import { useSidebar } from "@/components/ui/sidebar";
 
 defineProps({
   user: Object as PropType<User>,

@@ -1,3 +1,5 @@
+import tailwindcss from "@tailwindcss/vite";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2025-05-30",
@@ -32,7 +34,7 @@ export default defineNuxtConfig({
   },
   shadcn: {
     prefix: "",
-    componentDir: "./components/ui",
+    componentDir: "@/components/ui",
   },
   colorMode: {
     classSuffix: "",
@@ -62,6 +64,23 @@ export default defineNuxtConfig({
     strategy: "prefix_and_default",
     disableWatcher: false,
     disableUpdater: false,
+  },
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+    optimizeDeps: {
+      include: [
+        'vue-sonner',
+        'zod',
+        '@vee-validate/zod',
+        'class-variance-authority',
+        '@vueuse/core',
+        'lucide-vue-next',
+        'clsx',
+        'tailwind-merge',
+      ]
+    }
   },
   //#endregion Module Configuration
 
