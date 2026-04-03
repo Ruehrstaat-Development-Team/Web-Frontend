@@ -18,7 +18,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
 </script>
 
 <template>
-  <div v-if="collapsible === 'none'" :class="cn('flex h-full w-[var(--sidebar-width)] flex-col bg-sidebar-background text-sidebar-foreground', props.class)" v-bind="$attrs">
+  <div v-if="collapsible === 'none'" :class="cn('flex h-full w-(--sidebar-width) flex-col bg-sidebar-background text-sidebar-foreground', props.class)" v-bind="$attrs">
     <slot />
   </div>
 
@@ -27,7 +27,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
       data-sidebar="sidebar"
       data-mobile="true"
       :side="side"
-      class="w-[var(--sidebar-width)] bg-sidebar-background p-0 text-sidebar-foreground [&>button]:hidden"
+      class="w-(--sidebar-width) bg-sidebar-background p-0 text-sidebar-foreground [&>button]:hidden"
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
       }"
@@ -43,12 +43,12 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
     <div
       :class="
         cn(
-          'duration-200 relative h-svh w-[var(--sidebar-width)] bg-transparent transition-[width] ease-linear',
+          'duration-200 relative h-svh w-(--sidebar-width) bg-transparent transition-[width] ease-linear',
           'group-data-[collapsible=offcanvas]:w-0',
           'group-data-[side=right]:rotate-180',
           variant === 'floating' || variant === 'inset'
-            ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]'
-            : 'group-data-[collapsible=icon]:w-[var(--sidebar-width-icon)]'
+            ? 'group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4)))]'
+            : 'group-data-[collapsible=icon]:w-(--sidebar-width-icon)'
         )
       "
     />
@@ -60,7 +60,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
           // Adjust the padding for floating and inset variants.
           variant === 'floating' || variant === 'inset'
             ? 'p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]'
-            : 'group-data-[collapsible=icon]:w-[var(--sidebar-width-icon)] group-data-[side=left]:border-r group-data-[side=right]:border-l',
+            : 'group-data-[collapsible=icon]:w-[var(--sidebar-width-icon)]',
           props.class
         )
       "

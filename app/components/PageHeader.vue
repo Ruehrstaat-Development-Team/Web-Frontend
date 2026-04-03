@@ -1,16 +1,12 @@
 <template>
   <div
-    class="bg-transparent flex flex-row p-2 items-center fixed top-0 z-10 h-[50px] header transition-width duration-200 ease-linear"
+    class="bg-transparent flex flex-row p-2 items-center fixed top-0 z-10 h-12.5 header transition-width duration-200 ease-linear"
     :class="{
       open: persistentStore.sidebarOpen,
       closed: !persistentStore.sidebarOpen,
     }"
   >
     <SidebarTrigger />
-    <div class="flex flex-col items-center gap-2 ml-auto self-start">
-      <ThemeModeSelector />
-      <ThemeLanguageSelector />
-    </div>
   </div>
   <div class="relative mx-auto overflow-hidden mt-8 maxWidth" :class="maxWidth">
     <ThemeImage class="w-full h-44 rounded-lg shadow-md" dark_src="/BackgroundDark.webp" light_src="/BackgroundLight.webp" alt="Ruehrstaat Squadron Banner Background" />

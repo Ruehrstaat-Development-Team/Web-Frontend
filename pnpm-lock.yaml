@@ -34,7 +34,7 @@ importers:
         version: 4.15.1(magicast@0.5.2)(vue@3.5.31(typescript@6.0.2))
       '@vee-validate/zod':
         specifier: ^4.15.1
-        version: 4.15.1(vue@3.5.31(typescript@6.0.2))(zod@4.3.6)
+        version: 4.15.1(vue@3.5.31(typescript@6.0.2))(zod@3.25.76)
       '@vueuse/core':
         specifier: ^14.2.1
         version: 14.2.1(vue@3.5.31(typescript@6.0.2))
@@ -90,8 +90,8 @@ importers:
         specifier: ^2.0.9
         version: 2.0.9(@nuxt/kit@4.4.2(magicast@0.5.2))(@nuxt/schema@4.4.2)(nuxt@4.4.2(@babel/core@7.29.0)(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@emnapi/core@1.9.1)(@emnapi/runtime@1.9.1)(@parcel/watcher@2.5.6)(@types/node@25.5.0)(@vue/compiler-sfc@3.5.31)(cac@6.7.14)(db0@0.3.4)(ioredis@5.10.1)(lightningcss@1.32.0)(magicast@0.5.2)(pinia@3.0.4(typescript@6.0.2)(vue@3.5.31(typescript@6.0.2)))(rollup-plugin-visualizer@7.0.1(rollup@4.60.1))(rollup@4.60.1)(sass@1.98.0)(srvx@0.11.14)(terser@5.46.1)(typescript@6.0.2)(vite@7.3.1(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(sass@1.98.0)(terser@5.46.1)(yaml@2.8.3))(vue-tsc@2.2.12(typescript@6.0.2))(yaml@2.8.3))
       zod:
-        specifier: ^4.3.6
-        version: 4.3.6
+        specifier: ^3.25.76
+        version: 3.25.76
     devDependencies:
       '@iconify-json/material-symbols':
         specifier: ^1.2.64
@@ -4722,8 +4722,8 @@ packages:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
     engines: {node: '>= 14'}
 
-  zod@4.3.6:
-    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
+  zod@3.25.76:
+    resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
 snapshots:
 
@@ -6797,11 +6797,11 @@ snapshots:
       - magicast
       - vue
 
-  '@vee-validate/zod@4.15.1(vue@3.5.31(typescript@6.0.2))(zod@4.3.6)':
+  '@vee-validate/zod@4.15.1(vue@3.5.31(typescript@6.0.2))(zod@3.25.76)':
     dependencies:
       type-fest: 4.41.0
       vee-validate: 4.15.1(vue@3.5.31(typescript@6.0.2))
-      zod: 4.3.6
+      zod: 3.25.76
     transitivePeerDependencies:
       - vue
 
@@ -9695,4 +9695,4 @@ snapshots:
       compress-commons: 6.0.2
       readable-stream: 4.7.0
 
-  zod@4.3.6: {}
+  zod@3.25.76: {}

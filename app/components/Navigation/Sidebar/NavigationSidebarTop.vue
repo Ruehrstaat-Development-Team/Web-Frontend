@@ -1,13 +1,13 @@
 <template>
   <div
-    class="transition-[height,margin,width,border] duration-200 relative overflow-hidden"
+    class="transition-[height,margin,width,border] duration-200 relative overflow-hidden bg-sidebar-background"
     :class="{
       'h-12 w-12': !open && !isMobile,
       'h-20 m-0 w-72 rounded-none': open && !isMobile,
       'h-20 w-full': open && isMobile,
     }"
   >
-    <ThemeImage class="w-72 h-20" dark_src="/BackgroundDark.webp" light_src="/BackgroundLight.webp" alt="Ruehrstaat Squadron Banner Background" />
+    <ThemeImage class="w-72 h-20" dark_src="/BackgroundDark.webp" light_src="/BackgroundLight.webp" alt="Ruehrstaat Squadron Banner Background" v-if="colorMode.value != 'dark'"/>
     <div
       class="absolute top-0 left-auto ml-auto right-auto h-full flex flex-row items-center"
       :class="{
@@ -24,6 +24,7 @@
 <script lang="ts" setup>
 import { useSidebar } from "@/components/ui/sidebar";
 const { open, isMobile } = useSidebar();
+const colorMode = useColorMode();
 </script>
 
 <style lang="scss" scoped></style>

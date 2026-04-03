@@ -2,7 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2025-05-30",
+  compatibilityDate: "2026-04-01",
   devtools: { enabled: true },
   sourcemap: { client: true },
   modules: [
@@ -27,11 +27,6 @@ export default defineNuxtConfig({
   },
 
   //#region Module Configuration
-  tailwindcss: {
-    config: {
-      content: ["./app.vue", "./components/**/*.{vue,js,ts}", "./layouts/**/*.{vue,js,ts}", "./pages/**/*.{vue,js,ts}", "./plugins/**/*.{js,ts}"],
-    },
-  },
   shadcn: {
     prefix: "",
     componentDir: "@/components/ui",
@@ -49,7 +44,7 @@ export default defineNuxtConfig({
     customCollections: [
       {
         prefix: "rst",
-        dir: "./assets/icons",
+        dir: "./app/assets/icons",
       },
     ],
   },
@@ -60,10 +55,11 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "en",
     meta: true,
+    localeCookie: "user-locale",
     autoDetectLanguage: true,
-    strategy: "prefix_and_default",
-    disableWatcher: false,
-    disableUpdater: false,
+    autoDetectPath: "/",
+    strategy: "prefix",
+    hmr: true,
   },
   vite: {
     plugins: [

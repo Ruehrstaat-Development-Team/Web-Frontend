@@ -9,7 +9,12 @@
       "login": "Anmelden",
       "logout": "Abmelden",
       "settings": "Einstellungen",
-      "connector": "ED-Connector"
+      "connector": "ED-Connector",
+      "toggle-theme": "Thema wechseln",
+      "toggle-language": "Sprache wechseln",
+      "dark": "Dunkel",
+      "light": "Hell",
+      "system": "System"
     }
   },
   "layout-centered": {

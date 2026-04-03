@@ -9,7 +9,12 @@
       "login": "Login",
       "logout": "Logout",
       "settings": "Settings",
-      "connector": "ED-Connector"
+      "connector": "ED-Connector",
+      "toggle-theme": "Toggle theme",
+      "toggle-language": "Toggle language",
+      "dark": "Dark",
+      "light": "Light",
+      "system": "System"
     }
   },
   "layout-centered": {
