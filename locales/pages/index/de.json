@@ -1,1 +1,9 @@
-{}
+{
+    "hero": {
+        "title": "Willkommen beim",
+        "title-highlight": "Ruehrstaat Squadron",
+        "description": "Trete jetzt bei. Unsere außergewöhnlich große Fleet-Carrier-Armada bietet dir die perfekte Infrastruktur für Community Goals, lukratives Trading und als mobile Basis für deinen Combat-Support.",
+        "carriers": "Träger",
+        "members": "Mitglieder"
+    }
+}

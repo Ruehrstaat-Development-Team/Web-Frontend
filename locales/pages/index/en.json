@@ -1,1 +1,9 @@
-{}
+{
+    "hero": {
+        "title": "Welcome to",
+        "title-highlight": "Ruehrstaat Squadron",
+        "description": "Join us now. Our exceptionally large Fleet-Carrier fleet provides the perfect infrastructure for community goals, lucrative trading, and as a mobile base for your combat support.",
+        "carriers": "Carriers",
+        "members": "Members"
+    }
+}

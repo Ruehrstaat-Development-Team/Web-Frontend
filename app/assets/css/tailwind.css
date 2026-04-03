@@ -80,7 +80,7 @@
   --card: hsl(268 20% 10%);
   --card-foreground: hsl(210 40% 98%);
 
-  --border: hsl(268 20% 10%);
+  --border: hsl(267, 20%, 18%);
   --input: hsl(217.2 32.6% 17.5%);
 
   --button: hsl(268 15% 40%);
@@ -146,7 +146,17 @@
   src: url("/Primal.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "BitcountGrid";
+  src: url("/BitcountGridSingle-Variable.ttf") format("truetype");
+}
+
 @theme inline {
+
+  --font-bitcount: "BitcountGrid", sans-serif;
+  --font-bitcount--font-variation-settings: "WGHT" 300, "ELSH" 52;
+
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 

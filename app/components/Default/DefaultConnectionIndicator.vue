@@ -17,20 +17,19 @@
 .circle {
   width: 7px;
   height: 7px;
-  background-color: #62bd19;
-  border-radius: 50%;
+  background-color: var(--color-secondary);
   position: absolute;
   top: 4px;
   left: 4px;
 }
 
 .ringring {
-  border: 3px solid #62bd19;
-  border-radius: 30px;
+  border: 3px solid var(--color-secondary);
+  border-radius: 0px;
   height: 15px;
   width: 15px;
   position: absolute;
-  animation: pulsate 2s ease-out;
+  animation: pulsate 1.5s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;
   top: 0;
@@ -42,10 +41,10 @@
     opacity: 0;
   }
   50% {
-    opacity: 1;
+    opacity: .6;
   }
   100% {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.0, 1.0);
     opacity: 0;
   }
 }
