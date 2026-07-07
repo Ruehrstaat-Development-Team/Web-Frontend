@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full h-[60vh] overflow-hidden relative">
+  <div class="w-full h-[55vh] overflow-hidden relative">
     <ThemeImage dark_src="/BackgroundDark.webp" light_src="/BackgroundLight.webp"
-      class="w-full max-h-[60vh] saturate-20" />
+      class="w-full max-h-[55vh]" :class="{'saturate-20': $colorMode.value == 'dark'}" />
     <div
-      class="absolute top-0 left-0 w-full h-[60vh] flex flex-col items-start justify-center bg-linear-to-r from-black/80 to-transparent">
-      <h1 class="text-6xl font-light pl-6 text-white font-bitcount">{{ $t('hero.title') }}</h1>
+      class="absolute top-0 left-0 w-full h-[55vh] flex flex-col items-start justify-center bg-linear-to-r to-transparent" :class="{'from-black/80': $colorMode.value == 'dark', 'from-white/50': $colorMode.value == 'light'}">
+      <h1 class="text-6xl font-light pl-6 font-bitcount" :class="{'text-black' : $colorMode.value == 'light', 'text-white': $colorMode.value == 'dark'}">{{ $t('hero.title') }}</h1>
       <h1 class="text-8xl font-light pl-6 text-primary font-bitcount">{{ $t('hero.title-highlight') }}</h1>
       <p class="text-lg pl-6 text-muted-foreground max-w-2xl">
         {{ $t('hero.description') }}
@@ -38,6 +38,7 @@
 </template>
 
 <script lang="ts" setup>
+const { $t } = useI18n();
 
 </script>
 
